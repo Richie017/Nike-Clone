@@ -1,0 +1,41 @@
+.img-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.img-container .btn-txt {
+  position: absolute;
+  left: 5%;
+  top: 85%;
+}
+
+.img-container .btn-txt .btn {
+  position: relative;
+  top: 5%;
+  background-color: #fff;
+  color: #444;
+  font-size: 16px;
+  padding: 12px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 35px;
+}
+
+.img-container .btn-txt .txt {
+  position: relative;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.img-container .btn:hover {
+  background-color: #edeff5;
+}
