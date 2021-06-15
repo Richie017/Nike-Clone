@@ -8,7 +8,15 @@ class Trending extends Component {
     return (
       <Pane>
         <Pane>
-          <Heading size={1000} marginLeft={20} marginRight={20}>
+          <Heading
+            size={1400}
+            color='#111'
+            marginLeft={20}
+            marginRight={20}
+            paddingTop={10}
+            paddingBottom={20}
+            fontWeight={500}
+            fontFamily='Helvetica Neue|Helvetica|Arial|sans-serif'>
             Trending
           </Heading>
           <Pane
@@ -19,19 +27,23 @@ class Trending extends Component {
             <Pane className='img-container' marginRight={5}>
               <img src={liverpool} alt='' />
               <Pane className='btn-txt'>
-                <Heading size={600} className='txt'>
+                <Heading size={700} className='txt'>
                   Liverpool FC 2021/22 Home Jersey
                 </Heading>
-                <Button className='btn'> Shop </Button>
+                <Button height={45} className='btn'>
+                  Shop
+                </Button>
               </Pane>
             </Pane>
             <Pane className='img-container' marginLeft={5}>
               <img src={shoe1} alt='' />
               <Pane className='btn-txt'>
-                <Heading size={600} className='txt'>
+                <Heading size={700} className='txt'>
                   Nike Football Impulse Pack
                 </Heading>
-                <Button className='btn'> Shop </Button>
+                <Button height={45} className='btn'>
+                  Shop
+                </Button>
               </Pane>
             </Pane>
           </Pane>
