@@ -29,6 +29,7 @@
 .row {
   display: grid;
   grid-template-columns: 75% 25%;
+  margin-bottom: 16px;
 }
 
 .subRow {
