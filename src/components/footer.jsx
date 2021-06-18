@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Pane } from 'evergreen-ui';
-import '../assets/css/Footer.css'
+import { Pane, UnorderedList, ListItem } from 'evergreen-ui';
+import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa';
+import '../assets/css/Footer.css';
 
 class Footer extends Component {
     state = {
@@ -61,17 +62,14 @@ class Footer extends Component {
                                 </Pane>
                             )}
                         </Pane>
-                        {/*<hr/>
-                        <Pane className="column">
-                            <Pane>
-                                <UnorderedList>
-                                    <ListItem className="footerLink"><a href="/#"><i className="fab fa-twitter"> </i></a></ListItem>
-                                    <ListItem className="footerLink"><a href="/#"><i className="fab fa-facebook"> </i></a></ListItem>
-                                    <ListItem className="footerLink"><a href="/#"><i className="fab fa-youtube"> </i></a></ListItem>
-                                    <ListItem className="footerLink"><a href="/#"><i className="fab fa-instagram"> </i></a></ListItem>
-                                </UnorderedList>
-                            </Pane>
-                        </Pane>*/}
+                        <Pane className="socialMenu">
+                            {<UnorderedList className="socialLinks">
+                                <ListItem className="socialLink"><a href="/#"><FaTwitter className="socialIcon"/></a></ListItem>
+                                <ListItem className="socialLink"><a href="/#"><FaFacebookF className="socialIcon"/></a></ListItem>
+                                <ListItem className="socialLink"><a href="/#"><FaYoutube className="socialIcon"/></a></ListItem>
+                                <ListItem className="socialLink"><a href="/#"><FaInstagram className="socialIcon"/></a></ListItem>
+                            </UnorderedList>}
+                        </Pane>
                     </Pane>
                     {/*<hr/>
                     <Pane class="row2">
