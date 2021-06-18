@@ -1,5 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+
+@font-face {
+  font-family: "SFUI";
+  src: local("SFUI"), url(../fonts/SFUI.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "NikeTG";
+  src: local("NikeTG"), url(../fonts/NikeTG.otf) format("opentype");
+}
+
 .box {
-  padding: 80px 60px;
+  padding: 0px;
   background: black;
   position: absolute;
   bottom: 0;
@@ -10,33 +22,54 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 1000px;
   margin: 0 auto;
+  padding: 40px 40px 0px 40px;
 }
 
 .row {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: 75% 25%;
+}
+
+.subRow {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  padding: 0px 8px;
 }
 
 .column {
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-left: 60px;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 3px;
 }
 
 .heading {
-  font-size: 24px;
   color: #fff;
-  margin-bottom: 40px;
-  font-weight: bold;
+  margin: 0px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  text-decoration: none;
+  margin-bottom: 3px;
+  line-height: 28px;
+  letter-spacing: 0.3px;
 }
 
 .footerLink {
-  color: #fff;
-  margin-bottom: 20px;
-  font-size: 18px;
+  color: rgb(126, 126, 126);
+  margin: 0px;
+  font-family: "SFUI", sans-serif;
+  font-size: 11px;
   text-decoration: none;
+  margin-bottom: 3px;
+  line-height: 24px;
+}
+
+.footerLink:hover {
+  color: #fff;
 }

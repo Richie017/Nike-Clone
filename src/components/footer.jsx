@@ -50,16 +50,17 @@ class Footer extends Component {
             <Pane className="box"> 
                 <Pane className="container"> 
                     <Pane className="row"> 
-                        {/*<Pane className="column"> 
-                            this.state.footerFirstCol.map(col => <p className="heading"><a href={col.link}>{col.title}</a></p>)
-                        </Pane>
-                        <hr/>*/}
-                        {this.state.footerCols.map(col =>
-                             <Pane className="column">
-                                {<p className="heading">{col.head.title}</p>}
-                                {col.subLinks.map(subLink => <a className="footerLink" href={subLink.link}>{subLink.title}</a>)}
+                        <Pane className="subRow">
+                            <Pane className="column"> 
+                                {this.state.footerFirstCol.map(col => <p><a className="heading" href={col.link}>{col.title}</a></p>)}
                             </Pane>
-                        )}
+                            {this.state.footerCols.map(col =>
+                                <Pane className="column">
+                                    {<p><a className="heading" href={col.head.link}>{col.head.title}</a></p>}
+                                    {col.subLinks.map(subLink => <a className="footerLink" href={subLink.link}>{subLink.title}</a>)}
+                                </Pane>
+                            )}
+                        </Pane>
                         {/*<hr/>
                         <Pane className="column">
                             <Pane>
