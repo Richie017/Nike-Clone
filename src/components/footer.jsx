@@ -6,34 +6,36 @@ import '../assets/css/Footer.css';
 class Footer extends Component {
     state = {
         footerFirstCol: [
-            {title: "Gift Card", link: "/#"},
-            {title: "Promotion", link: "/#"},
-            {title: "Find A Store", link: "/#"},
-            {title: "Sign Up for Email", link: "/#"},
-            {title: "Become A Member", link: "/#"},
-            {title: "Nike Journal", link: "/#"},
-            {title: "Send Us Feedback", link: "/#"},
+            {id:"0.1", title: "Gift Card", link: "/#"},
+            {id:"0.2", title: "Promotion", link: "/#"},
+            {id:"0.3", title: "Find A Store", link: "/#"},
+            {id:"0.4", title: "Sign Up for Email", link: "/#"},
+            {id:"0.5", title: "Become A Member", link: "/#"},
+            {id:"0.6", title: "Nike Journal", link: "/#"},
+            {id:"0.7", title: "Send Us Feedback", link: "/#"},
         ],
         footerCols: [
             {
+                id: "1",
                 head: {title: "Get Help", link: "/#"},
                 subLinks: [
-                    {title: "Order Status", link: "/#"}, 
-                    {title: "Shipping and Delivery", link: "/#"}, 
-                    {title: "Returns", link: "/#"}, 
-                    {title: "Payment Options", link: "/#"}, 
-                    {title: "Gift Card Balance", link: "/#"}, 
-                    {title: "Contact Us", link: "/#"}, 
+                    {id:"1.1", title: "Order Status", link: "/#"}, 
+                    {id:"1.2", title: "Shipping and Delivery", link: "/#"}, 
+                    {id:"1.3", title: "Returns", link: "/#"}, 
+                    {id:"1.4", title: "Payment Options", link: "/#"}, 
+                    {id:"1.5", title: "Gift Card Balance", link: "/#"}, 
+                    {id:"1.6", title: "Contact Us", link: "/#"}, 
                 ]
             }, 
             {
+                id: "2",
                 head: {title: "About Nike", link: "/#"},
                 subLinks: [
-                    {title: "News", link: "/#"}, 
-                    {title: "Careers", link: "/#"}, 
-                    {title: "Investors", link: "/#"}, 
-                    {title: "Purpose", link: "/#"},  
-                    {title: "Sustainability", link: "/#"}, 
+                    {id:"2.1", title: "News", link: "/#"}, 
+                    {id:"2.2", title: "Careers", link: "/#"}, 
+                    {id:"2.3", title: "Investors", link: "/#"}, 
+                    {id:"2.4", title: "Purpose", link: "/#"},  
+                    {id:"2.5", title: "Sustainability", link: "/#"}, 
                 ]
             }, 
         ],
@@ -53,12 +55,12 @@ class Footer extends Component {
                     <Pane className="row"> 
                         <Pane className="subRow">
                             <Pane className="column"> 
-                                {this.state.footerFirstCol.map(col => <p><a className="heading" href={col.link}>{col.title}</a></p>)}
+                                {this.state.footerFirstCol.map(col => <p key={col.id}><a className="heading" href={col.link}>{col.title}</a></p>)}
                             </Pane>
                             {this.state.footerCols.map(col =>
-                                <Pane className="column">
+                                <Pane key={col.id} className="column">
                                     {<p><a className="heading" href={col.head.link}>{col.head.title}</a></p>}
-                                    {col.subLinks.map(subLink => <a className="footerLink" href={subLink.link}>{subLink.title}</a>)}
+                                    {col.subLinks.map(subLink => <a key={subLink.id} className="footerLink" href={subLink.link}>{subLink.title}</a>)}
                                 </Pane>
                             )}
                         </Pane>
