@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Pane, UnorderedList, ListItem } from 'evergreen-ui';
+import { Pane, UnorderedList, ListItem, MapMarkerIcon } from 'evergreen-ui';
 import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa';
 import '../assets/css/Footer.css';
 
@@ -40,11 +40,11 @@ class Footer extends Component {
             }, 
         ],
         bottomLinks: [
-            {title: "Guides", link: "/#"},
-            {title: "Terms of Sales", link: "/#"},
-            {title: "Terms of Use", link: "/#"},
-            {title: "Nike Privacy Policy", link: "/#"},
-            {title: "CA Supply Chains Act", link: "/#"},
+            {id:"3.1", title: "Guides", link: "/#"},
+            {id:"3.2", title: "Terms of Sales", link: "/#"},
+            {id:"3.3", title: "Terms of Use", link: "/#"},
+            {id:"3.4", title: "Nike Privacy Policy", link: "/#"},
+            {id:"3.5", title: "CA Supply Chains Act", link: "/#"},
         ],
     }
 
@@ -73,17 +73,20 @@ class Footer extends Component {
                             </UnorderedList>}
                         </Pane>
                     </Pane>
-                    {/*<hr/>
-                    <Pane class="row2">
-                        <Pane>
-                            &copy; {(new Date().getFullYear())} <a href="/#"> Potato Tech, All Rights Reserved. </a>
+                    <Pane className="subFooter">
+                        <Pane className="leftSubFooter">
+                            <a className="countryPin" href="/#">
+                                <MapMarkerIcon className="countryPinIcon"/>
+                                <span>United States</span>
+                            </a>
+                            <span className="labelCopyright">&copy; {(new Date().getFullYear())} Potato Tech. All Rights Reserved</span>
                         </Pane>
-                        <Pane>
+                        <Pane className="rightSubFooter">
                             <UnorderedList>
-                                {this.state.bottomLinks.map(bLink => <ListItem className="footerLink"><a href={bLink.link}>{bLink.title}</a></ListItem>)}
+                                {this.state.bottomLinks.map(bLink => <ListItem key={bLink.id}><a href={bLink.link}>{bLink.title}</a></ListItem>)}
                             </UnorderedList>
                         </Pane>
-                    </Pane>*/}
+                    </Pane>
                 </Pane>
             </Pane>
         );
