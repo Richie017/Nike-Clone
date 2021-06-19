@@ -1,10 +1,11 @@
-import Topnavbar from './components/header/navbar/Topnavbar'
+import React from "react";
+import Topnavbar from './components/header/navbar/Topnavbar';
 
 function App() {
   return (
-    <div >
-        <Topnavbar />
-    </div>
+    <React.Fragment>
+          <Topnavbar />
+    </React.Fragment> 
   );
 }
 
