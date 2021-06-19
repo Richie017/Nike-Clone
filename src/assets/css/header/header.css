@@ -1,0 +1,19 @@
+.Topnavbar {
+    padding: 10px;
+    height: 71px;
+    background-color: #fff;
+    border-color: #ffffff;
+    border: 0;
+    border-radius: 0;
+    color: #000;
+    text-align: center;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.Topnavbar:hover {
+    background-color: #fff;
+    border-bottom: 1px;
+    border-style:groove;
+    color: #000;
+}
