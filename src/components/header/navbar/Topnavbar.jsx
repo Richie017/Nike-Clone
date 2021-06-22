@@ -56,18 +56,18 @@ class Topnavbar extends Component {
   render() {
     return (
       <Pane
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-      }}>
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+        }}>
 
-      {/*Nike logo*/}
+        {/*Nike logo*/}
         <Pane padding="10px">
           <img src={nike} alt="" />
         </Pane>
 
-      {/*Category & Subcategory*/}
-        <Pane> 
+        {/*Category & Subcategory*/}
+        <Pane className="commonCategory">
           <TabNavigation
             style={{
               textAlign: "center",
@@ -76,7 +76,7 @@ class Topnavbar extends Component {
           >
             {this.state.catagories.map((category) => (
               <Tab
-                className = "Topnavbar"
+                className="Topnavbar"
                 key={category.id}
                 is="a"
                 href="#"
@@ -84,15 +84,24 @@ class Topnavbar extends Component {
                 {category.title}
               </Tab>
             ))}
+            <Pane className="commonSubCategory">
+              <ol>
+                <li>Test 1</li>
+                <li>Test 2</li>
+                <li>Test 3</li>
+                <li>Test 4</li>
+                <li>Test 5</li>
+              </ol>
+            </Pane>
           </TabNavigation>
         </Pane>
-        
-      {/*Seachbar, bookmarkbtn, cartbtn*/}
+
+        {/*Seachbar, bookmarkbtn, cartbtn*/}
         <Pane>
           <SearchInput placeholder="SEARCH" width="200px" />
 
           <Tooltip content="Add to Bookmark">
-           <IconButton color="success" icon={HeartIcon} marginLeft={majorScale(2)} />
+            <IconButton color="success" icon={HeartIcon} marginLeft={majorScale(2)} />
             {/*<HeartIcon color="muted" size={30} marginLeft={majorScale(2)} />*/}
           </Tooltip>
 
