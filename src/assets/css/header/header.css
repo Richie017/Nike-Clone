@@ -11,9 +11,18 @@
     font-weight: normal;
 }
 
-.Topnavbar:hover {
-    background-color: #fff;
-    border-bottom: 1px;
-    border-style:groove;
+.commonSubCategory {
+    visibility: hidden;
+  }
+
+.Topnavbar:hover ~ .commonSubCategory {
+    visibility: visible;
+    text-align: center;
+    background-color: whitesmoke;
+    display: inline-block;
+    position: absolute;
+    left: 1%;
+    right: 1%;
+    top: 8%;
     color: #000;
 }
