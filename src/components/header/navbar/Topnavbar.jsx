@@ -13,46 +13,204 @@ import {
 import nike from "../../../assets/img/nike.png";
 import '../../../assets/css/header/header.css';
 
+
 class Topnavbar extends Component {
   //state declaration
   constructor(props) {
     super(props);
+    //this.dd = this.dd.bind(this);
     this.state = {
       catagories: [
         {
           id: 1,
           title: "New Releases",
           url: "/new",
+          subCategory: [
+            {
+              id: 1.1,
+              title: "New & Featured",
+              url: "/#"
+            },
+            {
+              id: 1.2,
+              title: "New For Men",
+              url: "/#"
+            },
+            {
+              id: 1.3,
+              title: "New For Women",
+              url: "/#"
+            },
+            {
+              id: 1.4,
+              title: "New For Kids",
+              url: "/#"
+            }
+          ]
         },
         {
           id: 2,
           title: "Men",
           url: "/men",
+          subCategory: [
+            {
+              id: 2.1,
+              title: "New & Featured",
+              url: "/#"
+            },
+            {
+              id: 2.2,
+              title: "Shoes",
+              url: "/#"
+            },
+            {
+              id: 2.3,
+              title: "Clothing",
+              url: "/#"
+            },
+            {
+              id: 2.4,
+              title: "Accessories & Equipment",
+              url: "/#"
+            },
+            {
+              id: 2.5,
+              title: "Shop Collection",
+              url: "/#"
+            }
+          ]
         },
         {
           id: 3,
           title: "Women",
           url: "/women",
+          subCategory: [
+            {
+              id: 3.1,
+              title: "New & Featured",
+              url: "/#"
+            },
+            {
+              id: 3.2,
+              title: "Shoes",
+              url: "/#"
+            },
+            {
+              id: 3.3,
+              title: "Clothing",
+              url: "/#"
+            },
+            {
+              id: 3.4,
+              title: "Accessories & Equipment",
+              url: "/#"
+            },
+            {
+              id: 3.5,
+              title: "Shop Collection",
+              url: "/#"
+            }
+          ]
         },
         {
           id: 4,
           title: "Kids",
           url: "/kids",
+          subCategory: [
+            {
+              id: 4.1,
+              title: "New & Featured",
+              url: "/#"
+            },
+            {
+              id: 4.2,
+              title: "Boys Shoes",
+              url: "/#"
+            },
+            {
+              id: 4.3,
+              title: "Girls Shoes",
+              url: "/#"
+            },
+            {
+              id: 4.4,
+              title: "Boys Clothing",
+              url: "/#"
+            },
+            {
+              id: 4.5,
+              title: "Girls Clothing",
+              url: "/#"
+            },
+            {
+              id: 4.6,
+              title: "Baby & Toddler",
+              url: "/#"
+            },
+            {
+              id: 4.7,
+              title: "Accessories & Equipment",
+              url: "/#"
+            }
+          ]
         },
         {
           id: 5,
           title: "Customize",
           url: "/custom",
+          subCategory: [
+            {
+              id: 5.1,
+              title: "New & Featured",
+              url: "/#"
+            },
+            {
+              id: 5.2,
+              title: "Mens",
+              url: "/#"
+            },
+            {
+              id: 5.3,
+              title: "Womens",
+              url: "/#"
+            }
+          ]
         },
         {
           id: 6,
           title: "Sale",
           url: "/sale",
-        },
-      ],
+          subCategory: [
+            {
+              id: 6.1,
+              title: "Sale",
+              url: "/#"
+            },
+            {
+              id: 6.2,
+              title: "Mens Sale",
+              url: "/#"
+            },
+            {
+              id: 6.3,
+              title: "Womens Sale",
+              url: "/#"
+            },
+            {
+              id: 6.4,
+              title: "Kids Sale",
+              url: "/#"
+            }
+          ]
+        }
+      ]
     };
   }
 
+  /*dd () {
+    return <Pane>{this.catagories.subCategory.map(subLink => <a key={subLink.id} className="footerLink" href={subLink.url}>{subLink.title}</a>)}</Pane>
+  }*/
+  
   render() {
     return (
       <Pane
@@ -83,15 +241,16 @@ class Topnavbar extends Component {
               >
                 {category.title}
               </Tab>
+              {this.catagories.subCategory.map(subLink => <a key={subLink.id} className="footerLink" href={subLink.url}>{subLink.title}</a>)}
             ))}
             <Pane className="commonSubCategory">
-              <ol>
-                <li>Test 1</li>
-                <li>Test 2</li>
-                <li>Test 3</li>
-                <li>Test 4</li>
-                <li>Test 5</li>
-              </ol>
+              {this.state.catagories.map((cat) => (
+                <Pane key={cat.id}>
+                  {cat.subCategory.map((subcat) => (
+                    <Tab key={subcat.id} href={subcat.url}>{subcat.title}</Tab>
+                  ))}
+                </Pane>
+              ))}
             </Pane>
           </TabNavigation>
         </Pane>
@@ -113,5 +272,6 @@ class Topnavbar extends Component {
     );
   }
 }
+
 
 export default Topnavbar;
