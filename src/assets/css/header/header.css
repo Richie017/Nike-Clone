@@ -1,34 +1,84 @@
-.Topnavbar {
-    padding: 10px;
-    height: 71px;
-    background-color: #fff;
-    border-color: #ffffff;
-    border: 0;
-    border-radius: 0;
-    color: #000;
-    text-align: center;
-    font-size: 15px;
-    font-weight: normal;
+/*.table {
+  padding: 10px;
+  height: 71px;
+  background-color: #fff;
+  border-color: #ffffff;
+  border: 0;
+  border-radius: 0;
+  color: #000;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: normal;
+}*/
+
+.commonCategory {
+  overflow: hidden;
 }
 
-.commonSubCategory {
-    visibility: hidden;
-  }
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .Topnavbar {
+  font-size: 16px;
+  border-color: #ffffff;
+  border: 0;
+  border-radius: 0;
+  color: #000;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
 
 .Topnavbar:hover {
-    background-color: #fff;
-    border-bottom: 1px;
-    border-style:groove;
-    color: #000;
+  background-color: #fff;
+  border-bottom: 1px;
+  border-style: groove;
+  color: #000;
 }
 
-.Topnavbar:hover ~ .commonSubCategory {
-    visibility: visible;
-    text-align: center;
-    background-color: whitesmoke;
-    display: inline-block;
-    position: absolute;
-    left: 1%;
-    right: 1%;
-    top: 8%;
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: whitesmoke;
+  width: 100%;
+  z-index: 1;
 }
+.commonSubCategory {
+  visibility: hidden;
+}
+.subnav-content .commonSubCategory {
+  float: left;
+  color: #000;
+  text-decoration: none;
+}
+
+.subnav-content .commonSubCategory:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  visibility: visible;
+  text-align: center;
+  background-color: whitesmoke;
+  display: inline-block;
+  position: absolute;
+  left: 1%;
+  right: 1%;
+  top: 8%;
+}
+/*.Topnavbar:hover ~ .commonSubCategory {
+  visibility: visible;
+  text-align: center;
+  background-color: whitesmoke;
+  display: inline-block;
+  position: absolute;
+  left: 1%;
+  right: 1%;
+  top: 8%;
+}*/
