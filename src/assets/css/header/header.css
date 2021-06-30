@@ -12,13 +12,10 @@
   font-weight: normal;
 }*/
 
-.commonCategory {
-  overflow: hidden;
-}
-
 .subnav {
   float: left;
   overflow: hidden;
+  padding: 10px;
 }
 
 .subnav .Topnavbar {
@@ -28,9 +25,6 @@
   border-radius: 0;
   color: #000;
   padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
 }
 
 .Topnavbar:hover {
@@ -48,30 +42,34 @@
   width: 100%;
   z-index: 1;
 }
+
 .commonSubCategory {
   visibility: hidden;
 }
+
 .subnav-content .commonSubCategory {
-  float: left;
   color: #000;
+  font-size: 12px;
   text-decoration: none;
+  background-color: whitesmoke;
+  visibility: visible;
+  text-align: center;
+  margin-inline: 2%;
 }
 
-.subnav-content .commonSubCategory:hover {
+/*.subnav-content .commonSubCategory:hover {
   background-color: whitesmoke;
   color: black;
-}
+}*/
 
 .subnav:hover .subnav-content {
-  visibility: visible;
   text-align: center;
   background-color: whitesmoke;
   display: inline-block;
   position: absolute;
-  left: 1%;
-  right: 1%;
-  top: 8%;
+  top: 5%;
 }
+
 /*.Topnavbar:hover ~ .commonSubCategory {
   visibility: visible;
   text-align: center;
