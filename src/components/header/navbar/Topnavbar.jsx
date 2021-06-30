@@ -229,14 +229,13 @@ class Topnavbar extends Component {
           <TabNavigation
             style={{
               textAlign: "center",
-              marginLeft: "70px",
+              marginLeft: "20px",
             }}
           >
             {this.state.catagories.map((category) => (
-                <Pane className="subnav">
+                <Pane className="subnav" key={category.id}>
                   <Tab
                     className="Topnavbar"
-                    key={category.id}
                     is="a"
                     href="#"
                   >
@@ -248,17 +247,8 @@ class Topnavbar extends Component {
                 </Pane>
               
             ))}
-           {/* <Pane className="commonSubCategory">
-              {this.state.catagories.map((cat) => (
-                <Pane key={cat.id}>
-                  {cat.subCategory.map((subcat) => (
-                    <Tab key={subcat.id} href={subcat.url}>{subcat.title}</Tab>
-                  ))}
-                </Pane>
-              ))}
-            </Pane>
-            */}
           </TabNavigation>
+          
         </Pane>
                   
         {/*Seachbar, bookmarkbtn, cartbtn*/}
