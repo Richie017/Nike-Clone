@@ -233,10 +233,9 @@ class Topnavbar extends Component {
             }}
           >
             {this.state.catagories.map((category) => (
-                <Pane className="subnav">
+                <Pane className="subnav" key={category.id}>
                   <Tab
                     className="Topnavbar"
-                    key={category.id}
                     is="a"
                     href="#"
                   >
