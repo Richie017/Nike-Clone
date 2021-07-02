@@ -10,8 +10,8 @@ import {
   Tooltip,
   majorScale,
 } from "evergreen-ui";
-import nike from "../../../assets/img/nike.png";
-import '../../../assets/css/header/header.css';
+import nike from "../../assets/img/nike.png";
+import '../../assets/css/header/header.css';
 
 
 class Topnavbar extends Component {

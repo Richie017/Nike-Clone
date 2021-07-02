@@ -21,7 +21,7 @@ class ImageButton extends Component {
       <Pane className="img-component-container">
         <img
           src={
-            require("../assets/img/" + this.props.img_name + ".png")?.default
+            require("../assets/images/" + this.props.img_name + ".png")?.default
           }
           alt=""
         />
