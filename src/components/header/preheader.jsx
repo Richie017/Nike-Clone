@@ -8,6 +8,20 @@ import '../../assets/css/header/preheader.css';
 
 
 class PreHeader extends Component {
+    state = {
+        helpMenuLinks: [
+            {id:"0.1", title: "Order Status", link: "/#"},
+            {id:"0.2", title: "Shipping Delivery", link: "/#"},
+            {id:"0.3", title: "Returns", link: "/#"},
+            {id:"0.4", title: "Size Charts", link: "/#"},
+            {id:"0.5", title: "Contact Us", link: "/#"},
+            {id:"0.6", title: "Privacy Policy", link: "/#"},
+            {id:"0.7", title: "Terms of Sale", link: "/#"},
+            {id:"0.8", title: "Terms of Use", link: "/#"},
+            {id:"0.9", title: "Send Us Feedback", link: "/#"}
+        ]
+    }
+
     render() { 
         return (
             <Pane className="panePreHeader">
@@ -16,11 +30,21 @@ class PreHeader extends Component {
                     <ListItem><a href="/#"><img src={converseLogo} alt="Converse Logo"/></a></ListItem>
                 </UnorderedList>
                 <Pane className="desktopMenu">
-                    <a href="/#">Help</a>
+                    <Pane className="paneHelp">
+                        <a href="/#" className="desktopMenuLink">Help</a>
+                        <Pane className="helpMenuDropDown">
+                            <Pane>
+                                <a href="/#">Help</a>
+                                <UnorderedList className="helpMenuLinksList">
+                                    {this.state.helpMenuLinks.map(link => <ListItem key={link.id}><a href={link.link}>{link.title}</a></ListItem>)}
+                                </UnorderedList>
+                            </Pane>
+                        </Pane>
+                    </Pane>
                     <span>|</span>
-                    <a href="/#">Join Us</a>
+                    <a href="/#" className="desktopMenuLink">Join Us</a>
                     <span>|</span>
-                    <a href="/#">Sign In</a>
+                    <a href="/#" className="desktopMenuLink">Sign In</a>
                 </Pane>
             </Pane>
         );
