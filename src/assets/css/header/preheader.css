@@ -23,7 +23,7 @@
 }
 
 .iconList > li > a {
-  padding: 0px 12px 0px 12px;
+  padding: 0px 12px;
   display: flex;
   align-items: center;
   height: 100%;
@@ -47,17 +47,81 @@
   align-items: center;
 }
 
-.desktopMenu > a {
+.desktopMenuLink {
   display: inline-block;
   margin: 0px 8px;
   text-decoration: none;
   color: #111;
 }
 
-.desktopMenu > a:hover {
+.desktopMenuLink:hover {
   color: #757575;
 }
 
 .desktopMenu > span {
   margin: 0px 4px;
+}
+
+.paneHelp {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.helpMenuDropDown {
+  background-color: white;
+  position: absolute;
+  top: 36px;
+  right: 0;
+  min-width: 240px;
+  border-radius: 0px 0px 8px 8px;
+  z-index: 100;
+  transform: translateY(-20px);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0s linear 0.1s, transform 0.25s ease;
+}
+
+.paneHelp:hover .helpMenuDropDown {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.helpMenuDropDown > div {
+  padding: 24px 24px 24px 16px;
+}
+
+.helpMenuDropDown > div > a {
+  display: inline-block;
+  font-family: "SFUI", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+  padding: 4px 8px;
+  margin-bottom: 12px;
+}
+
+.helpMenuLinksList {
+  list-style: none;
+  margin: 0px;
+}
+
+.helpMenuLinksList > li {
+  margin: 0px;
+}
+
+.helpMenuLinksList > li > a {
+  display: block;
+  color: #757575;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 4px 8px;
+  line-height: 20px;
+}
+
+.helpMenuLinksList > li > a:hover {
+  color: #111;
 }
