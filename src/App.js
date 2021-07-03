@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import PreHeader from './components/header/preheader';
-import Topnavbar from './components/header/Topnavbar';
+import PreHeader from './components/header/PreHeader';
+import TopNavBar from './components/header/TopNavBar';
 import Trending from './pages/components/Trending';
-import Footer from './components/footer';
+import Footer from './components/Footer';
 
 class App extends Component {
     render() {
         return (
             <React.Fragment>
                 <PreHeader />
-                <Topnavbar />
+                <TopNavBar />
                 <Trending />
                 <Footer />
             </React.Fragment>

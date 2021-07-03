@@ -10,11 +10,11 @@ import {
   Tooltip,
   majorScale,
 } from "evergreen-ui";
-import nike from "../../assets/img/nike.png";
+import nike from "../../assets/images/nike.png";
 import '../../assets/css/header/header.css';
 
 
-class Topnavbar extends Component {
+class TopNavBar extends Component {
   //state declaration
   constructor(props) {
     super(props);
@@ -279,4 +279,4 @@ class Topnavbar extends Component {
 }
 
 
-export default Topnavbar;
+export default TopNavBar;

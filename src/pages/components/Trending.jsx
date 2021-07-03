@@ -14,12 +14,12 @@ class Trending extends Component {
           heading: "Nike Football Impulse Pack",
         },
         {
-          id: "1",
+          id: "2",
           img_name: "liverpool-1",
           heading: "Liverpool FC 2021/22 Home Jersey",
         },
         {
-          id: "1",
+          id: "3",
           img_name: "nike-usa",
           heading: "The New Us women's National Team Kit",
         },
@@ -41,7 +41,7 @@ class Trending extends Component {
         <Pane className="img-container">
           {this.state.images.map((image) => (
             <ImageButton
-              id={image.id}
+              key={image.id}
               img_name={image.img_name}
               heading={image.heading}
             />

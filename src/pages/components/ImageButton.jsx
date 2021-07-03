@@ -16,7 +16,6 @@ class ImageButton extends Component {
   }
 
   render() {
-    console.log(this.props.name);
     return (
       <Pane className="img-component-container">
         <img

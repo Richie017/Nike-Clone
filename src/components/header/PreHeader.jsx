@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Pane, UnorderedList, ListItem } from 'evergreen-ui';
 
-import jordanLogo from '../../assets/img/jordan_logo_sm.png';
-import converseLogo from '../../assets/img/converse_logo_sm.png';
+import jordanLogo from '../../assets/images/jordan_logo_sm.png';
+import converseLogo from '../../assets/images/converse_logo_sm.png';
 
 import '../../assets/css/header/preheader.css';
 
