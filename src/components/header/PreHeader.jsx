@@ -5,6 +5,7 @@ import jordanLogo from '../../assets/images/jordan_logo_sm.png';
 import converseLogo from '../../assets/images/converse_logo_sm.png';
 
 import '../../assets/css/header/preheader.css';
+import PopUp from './SignInPopUp.jsx';
 
 
 class PreHeader extends Component {
@@ -19,8 +20,15 @@ class PreHeader extends Component {
             {id:"0.7", title: "Terms of Sale", link: "/#"},
             {id:"0.8", title: "Terms of Use", link: "/#"},
             {id:"0.9", title: "Send Us Feedback", link: "/#"}
-        ]
+        ],
+        seen: false
     }
+
+    togglePop = () => {
+        this.setState({
+          seen: !this.state.seen
+        });
+    };
 
     render() { 
         return (
@@ -44,7 +52,22 @@ class PreHeader extends Component {
                     <span>|</span>
                     <a href="/#" className="desktopMenuLink">Join Us</a>
                     <span>|</span>
-                    <a href="/#" className="desktopMenuLink">Sign In</a>
+                    <Pane>
+                        <Pane onClick={this.togglePop.bind(this)}>
+                            <a href="/#" className="desktopMenuLink">Sign In</a>
+                        </Pane>
+                        {this.state.seen ? <PopUp toggle={this.togglePop.bind(this)} /> : null}
+                    </Pane>
+                        {/*<Popover placement="right" positionLeft={200} positionTop={50}
+                            content={
+                                <Pane width={436} height={491} display="flex" alignItems="center" justifyContent="center" flexDirection="column" >
+                                    <TextInput name="text-input-email" placeholder="Email Address" />
+                                    <TextInput name="text-input-password" placeholder="Password" />
+                                </Pane>
+                            }
+                            >
+                            <a href="/#" className="desktopMenuLink">Sign In</a>
+                        </Popover>*/}
                 </Pane>
             </Pane>
         );

@@ -125,3 +125,25 @@
 .helpMenuLinksList > li > a:hover {
   color: #111;
 }
+
+/*.popOver {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}*/
+
+/*.popOver {
+  position: relative;
+  display: inline;
+}
+
+.popOver > div + * {
+  position: absolute;
+  bottom: calc(0.5rem + 100%);
+  right: 50%;
+  transform: translateX(50%);
+}*/
