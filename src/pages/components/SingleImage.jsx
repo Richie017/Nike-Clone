@@ -1,24 +1,18 @@
 import React, { Component } from "react";
-import { Pane, Heading } from "evergreen-ui";
+import { Pane } from "evergreen-ui";
 import "../assets/css/ImageButton.css";
 import ImageButton from "./ImageButton";
 
-class Trending extends Component {
+class SingleImage extends Component {
   constructor() {
     super();
     this.state = {
       images: [
         {
           id: "1",
-          img_name: "shoe-1",
-          heading: "Nike Football Impulse Pack",
-          sub_heading: "",
-        },
-        {
-          id: "2",
-          img_name: "liverpool-1",
-          heading: "Liverpool FC 2021/22 Home Jersey",
-          sub_heading: "",
+          img_name: "top-img",
+          heading: "Air Max Summer",
+          sub_heading: "The Best of Air Max for your best summer ever",
         },
       ],
     };
@@ -27,9 +21,6 @@ class Trending extends Component {
   render() {
     return (
       <Pane className="container">
-        <Pane>
-          <Heading className="header-img">Trending</Heading>
-        </Pane>
         <Pane className="img-container">
           {this.state.images.map((image) => (
             <ImageButton
@@ -46,4 +37,4 @@ class Trending extends Component {
   }
 }
 
-export default Trending;
+export default SingleImage;
