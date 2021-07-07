@@ -3,22 +3,31 @@ import { Pane, Heading } from "evergreen-ui";
 import "../assets/css/ImageButton.css";
 import ImageButton from "./ImageButton";
 
-class Trending extends Component {
+class TripleImage extends Component {
   constructor() {
     super();
     this.state = {
       images: [
         {
           id: "1",
-          img_name: "shoe-1",
-          heading: "Nike Football Impulse Pack",
+          img_name: "men-short",
+          heading: "Men's Short",
           sub_heading: "",
+          caption: "out-place",
         },
         {
           id: "2",
-          img_name: "liverpool-1",
-          heading: "Liverpool FC 2021/22 Home Jersey",
+          img_name: "women-short",
+          heading: "Womens's Short",
           sub_heading: "",
+          caption: "out-place",
+        },
+        {
+          id: "3",
+          img_name: "kids-short",
+          heading: "Kid's Short",
+          sub_heading: "",
+          caption: "out-place",
         },
       ],
     };
@@ -28,7 +37,7 @@ class Trending extends Component {
     return (
       <Pane className="container">
         <Pane>
-          <Heading className="header-img">Trending</Heading>
+          <Heading className="header-img">More To Explore</Heading>
         </Pane>
         <Pane className="img-container">
           {this.state.images.map((image) => (
@@ -38,6 +47,7 @@ class Trending extends Component {
               img_name={image.img_name}
               heading={image.heading}
               sub_heading={image.sub_heading}
+              caption={image.caption}
             />
           ))}
         </Pane>
@@ -46,4 +56,4 @@ class Trending extends Component {
   }
 }
 
-export default Trending;
+export default TripleImage;
