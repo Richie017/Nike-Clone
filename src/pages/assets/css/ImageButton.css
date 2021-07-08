@@ -66,6 +66,8 @@
   position: relative;
 }
 .btn {
+  top: 65%;
+  position: relative;
   background-color: #fff;
   color: #111;
   font-size: 16px;
