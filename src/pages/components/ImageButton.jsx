@@ -74,6 +74,9 @@ class ImageButton extends Component {
 
         <Pane className="figCaption" position="absolute"></Pane>
         <Pane>{sub_heading_func()}</Pane>
+        <Pane className="btncls">
+          <Button className="btn"> Shop </Button>
+        </Pane>
       </Pane>
     );
   }
