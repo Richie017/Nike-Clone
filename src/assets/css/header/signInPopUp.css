@@ -18,14 +18,20 @@
   top: 25%;
   bottom: 25%;
   width: 436px;
-  height: 491px;
+  height: 500px;
   margin: auto;
   background: white;
 }
 
 .close {
-  color: Black;
-  float: right;
+  color: #000;
+  background-color: #fff;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 45px;
+  border: none;
+  padding: 0;
 }
 
 /*header {
@@ -75,26 +81,73 @@
   text-align: left;
 }
 
-.test {
+.signIn_div {
   width: 50%;
+  float: left;
 }
 
-.signedIn {
+.signedIn_checkbox {
   line-height: 20px;
-  width: 50%;
-  left: 18%;
+  left: 35%;
   position: relative;
-  font-size: 50px;
 }
 
-.gg {
+.fgot_pass {
   position: relative;
   width: 50%;
   float: right;
+  line-height: 20px;
+  margin: 16px 0 20px;
+  text-align: center;
 }
 
 .forgot_pass {
-  color: #474d66;
+  color: #8d8d8d;
   font-size: 12px;
   text-decoration: none;
+  line-height: normal;
+  font-family: inherit;
+}
+
+.policy_text {
+  clear: both;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  outline: 0;
+  margin: 0 78px;
+  color: #8d8d8d;
+}
+
+a {
+  color: #8d8d8d;
+}
+
+.btn {
+  margin: 20px 0;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.btn_signin {
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 15px;
+  margin: auto;
+  height: 40px;
+  line-height: 17px;
+  width: 65%;
+}
+
+.bottom_text {
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  margin: 5px 0;
+  color: #8d8d8d;
 }
