@@ -15,16 +15,36 @@
 .subnav {
   float: left;
   overflow: hidden;
-  padding: 20px 2px;
+  padding: 20px 1px 20px 1px;
+  text-align:justify;
+}
+
+.logo{
+  padding:5px 35px;
+}
+
+.logo > a > img:hover {
+  filter: invert(47%) sepia(0%) saturate(2%) hue-rotate(120deg) brightness(96%)
+    contrast(91%);
+}
+
+.column {
+  display: flex;
+  align-items: flex-start; /* CHANGED */
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 5px;
+ 
 }
 
 .subnav .Topnavbar {
   font-size: 16px;
-  border-color: #ffffff;
+  border-color: #fff;
   border: 0;
   border-radius: 0;
   color: #000;
-  padding: 0px 2px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 .Topnavbar:hover {
@@ -34,43 +54,70 @@
   color: #000;
 }
 
+.Topnavbar:focus{
+  box-shadow: none;
+}
+
 .subnav-content {
   display: none;
   position: absolute;
   left: 0;
-  background-color: whitesmoke;
+  background-color: #fff;
   width: 100%;
+  text-align: left;
   z-index: 1;
+}
+
+
+
+
+.subnav-content .commonSubCategory {
+  color: #000;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #fff;
+  visibility: visible;
+}
+
+.subnav-content .commonSubSubCategory {
+  color: #555;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #fff;
+  visibility: visible;
 }
 
 .commonSubCategory {
   visibility: hidden;
 }
 
-.subnav-content .commonSubCategory {
-  color: #000;
-  font-size: 12px;
-  text-decoration: none;
-  background-color: whitesmoke;
-  visibility: visible;
-  text-align: center;
-  margin-inline: 2%;
+.commonSubCategory:focus {
+  box-shadow: none;
+} 
+
+.commonSubSubCategory:focus {
+  box-shadow: none;
 }
 
-/*.subnav-content .commonSubCategory:hover {
-  background-color: whitesmoke;
-  color: black;
-}*/
+.subnav-content .commonSubSubCategory:hover {
+  color:#000;
+}
+.subnav-content .commonSubCategory:hover {
+  font-size: 16px;
+}
 
 .subnav:hover .subnav-content {
-  text-align: center;
-  background-color: whitesmoke;
-  display: inline-block;
+  background-color: #fff;
+  display: flex;
+  flex-direction:row;
+  justify-content:center;
   position: absolute;
-  top: 6%;
+  top: 10%;
+  padding: 20px 20px 20px 20px;
+  font-weight: normal;
 }
 
-/*.TopNavBar:hover ~ .commonSubCategory {
+/*.Topnavbar:hover ~ .commonSubCategory {
   visibility: visible;
   text-align: center;
   background-color: whitesmoke;
@@ -80,3 +127,7 @@
   right: 1%;
   top: 8%;
 }*/
+
+.searchbar {
+  border-radius: 20px;
+}
