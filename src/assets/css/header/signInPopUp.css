@@ -11,7 +11,7 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal_content {
+.modal-content {
   position: absolute;
   left: 25%;
   right: 25%;
@@ -23,7 +23,7 @@
   background: white;
 }
 
-.close {
+.btn-close {
   color: #000;
   background-color: #fff;
   position: absolute;
@@ -34,15 +34,7 @@
   padding: 0;
 }
 
-/*header {
-  padding: 0;
-  border: 0;
-  display: block;
-  margin: 0;
-  outline: 0;
-}*/
-
-.nikeImage {
+.nike-image {
   height: 17px;
   max-width: 573px;
   margin: 30px;
@@ -52,7 +44,7 @@
   background-size: 43px;
 }
 
-.header_text {
+.header-text {
   font-size: 26px;
   line-height: 26px;
   margin: 30px 0;
@@ -61,7 +53,7 @@
   font-weight: 700;
 }
 
-.input_email {
+.input-email {
   padding: 20px;
   display: inline-block;
   margin: 0 0 30px;
@@ -71,7 +63,7 @@
   text-align: left;
 }
 
-.input_password {
+.input-password {
   padding: 20px;
   display: inline-block;
   margin: 0 0 10px;
@@ -81,18 +73,18 @@
   text-align: left;
 }
 
-.signIn_div {
+.sign-in-div {
   width: 50%;
   float: left;
 }
 
-.signedIn_checkbox {
+.signed-in-checkbox {
   line-height: 20px;
   left: 35%;
   position: relative;
 }
 
-.fgot_pass {
+.forgot-pass-div {
   position: relative;
   width: 50%;
   float: right;
@@ -101,7 +93,7 @@
   text-align: center;
 }
 
-.forgot_pass {
+.forgot-pass-link {
   color: #8d8d8d;
   font-size: 12px;
   text-decoration: none;
@@ -109,7 +101,7 @@
   font-family: inherit;
 }
 
-.policy_text {
+.policy-text {
   clear: both;
   font-size: 12px;
   line-height: 16px;
@@ -130,7 +122,7 @@ a {
   width: 100%;
 }
 
-.btn_signin {
+.btn-sign-in {
   background-color: #000;
   border: 1px solid #000;
   border-radius: 3px;
@@ -144,10 +136,14 @@ a {
   width: 65%;
 }
 
-.bottom_text {
+.bottom-text {
   font-size: 12px;
   line-height: 14px;
   text-align: center;
   margin: 5px 0;
   color: #8d8d8d;
+}
+
+.bottom-text-link {
+  color: #000;
 }

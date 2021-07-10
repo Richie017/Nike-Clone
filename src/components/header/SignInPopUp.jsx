@@ -6,12 +6,12 @@ import '../../assets/css/header/signInPopUp.css';
 class PopUp extends Component {
 
   state = {
-    isChecked: true
+    isKeepMeSignedInChecked: true
   }
 
   toggleCheck = () => {
     this.setState({
-      isChecked: !this.state.isChecked
+      isKeepMeSignedInChecked: !this.state.isKeepMeSignedInChecked
     });
   };
 
@@ -22,40 +22,40 @@ class PopUp extends Component {
   render() {
     return (
       <Pane className="modal">
-        <Pane className="modal_content">
+        <Pane className="modal-content">
           <Pane>
-            <Button className="close" onClick={this.handleClick.bind(this)} appearance="none">
+            <Button className="btn-close" onClick={this.handleClick.bind(this)} appearance="none">
               <span>
                 &times;
               </span>
             </Button>
           </Pane>
           <header>
-            <Pane className="nikeImage"></Pane>
-            <Pane className="header_text">YOUR ACCOUNT FOR EVERYTHING NIKE</Pane>
+            <Pane className="nike-image"></Pane>
+            <Pane className="header-text">YOUR ACCOUNT FOR EVERYTHING NIKE</Pane>
           </header>
           <Pane display="flex" alignItems="center" justifyContent="center" flexDirection="column" >
-            <TextInput className="input_email" placeholder="Email address" />
-            <TextInput className="input_password" placeholder="Password" />
+            <TextInput className="input-email" placeholder="Email address" />
+            <TextInput className="input-password" placeholder="Password" />
           </Pane>
-          <Pane className="signIn_div">
-            <Checkbox className="signedIn_checkbox" checked={this.state.isChecked} label="Keep me signed in" onChange={this.toggleCheck.bind(this)} />
+          <Pane className="sign-in-div">
+            <Checkbox className="signed-in-checkbox" checked={this.state.isKeepMeSignedInChecked} label="Keep me signed in" onChange={this.toggleCheck.bind(this)} />
           </Pane>
-          <Pane className="fgot_pass">
-            <a href="/#" className="forgot_pass">Forgot password?</a>
+          <Pane className="forgot-pass-div">
+            <a href="/#" className="forgot-pass-link">Forgot password?</a>
           </Pane>
-          <Pane className="policy_text">
+          <Pane className="policy-text">
             <p>
               By logging in, you agree to Nike's <a href="/#">Privacy Policy</a> and <a href="/#">Terms of Use</a>
               .
             </p>
           </Pane>
           <Pane className="btn">
-            <Button className="btn_signin" appearance="none">
+            <Button className="btn-sign-in" appearance="none">
               Sign In
             </Button>
           </Pane>
-          <Pane className="bottom_text">Not a member? <a href="/#" style={{color: "black"}}>Join Us.</a></Pane>
+          <Pane className="bottom-text">Not a member? <a href="/#" className="bottom-text-link">Join Us.</a></Pane>
         </Pane>
       </Pane>
     );
