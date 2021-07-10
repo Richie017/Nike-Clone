@@ -11,6 +11,7 @@ class ImageButton extends Component {
           img_name: "",
           heading: "",
           sub_heading: "",
+          caption: "",
         },
       ],
     };
@@ -21,7 +22,7 @@ class ImageButton extends Component {
     const sub_heading_func = () => {
       if (sub_heading !== "") {
         return (
-          <Pane className="img-caption">
+          <Pane>
             <Heading className="heading-txt">{this.props.heading}</Heading>
             <Heading className="subheading-txt">
               {this.props.sub_heading}
@@ -33,7 +34,7 @@ class ImageButton extends Component {
         );
       } else {
         return (
-          <Pane className="img-caption">
+          <Pane>
             <Heading className="txt">{this.props.heading}</Heading>
             <Pane className="btncls">
               <Button className="btn"> Shop </Button>
@@ -43,25 +44,22 @@ class ImageButton extends Component {
       }
     };
 
-    /*let btn_visibity = this.props.caption;
-    console.log(btn_visibity);
+    let btn_visibity = this.props.caption;
+    console.log("btn" + btn_visibity);
     const btn_func = () => {
-      if (btn_visibity !== "") {
-        return (
-          <Pane>
-            {sub_heading_func()}
-            <Button className="btn"> Shop </Button>
-          </Pane>
-        );
-      } else {
+      if (btn_visibity === "out-place") {
         return <Heading className="out-caption">{this.props.heading}</Heading>;
+      } else {
+        return sub_heading_func();
       }
-    };*/
+    };
 
-    const position =
-      this.props.caption === "out-place" ? "relative" : "absoulte";
+    const cap_position =
+      this.props.caption === "out-place" ? "relative" : "absolute";
+    const cap_class =
+      this.props.caption === "out-place" ? "figCaption1" : "figCaption";
 
-    console.log(position);
+    console.log(cap_position);
 
     return (
       <Pane className="img-component-container">
@@ -72,10 +70,8 @@ class ImageButton extends Component {
           alt=""
         />
 
-        <Pane className="figCaption" position="absolute"></Pane>
-        <Pane>{sub_heading_func()}</Pane>
-        <Pane className="btncls">
-          <Button className="btn"> Shop </Button>
+        <Pane className={cap_class} position={cap_position}>
+          {btn_func()}
         </Pane>
       </Pane>
     );
