@@ -21,12 +21,12 @@ class PreHeader extends Component {
             {id:"0.8", title: "Terms of Use", link: "/#"},
             {id:"0.9", title: "Send Us Feedback", link: "/#"}
         ],
-        seen: false
+        isSignInClicked: false
     }
 
     togglePop = () => {
         this.setState({
-          seen: !this.state.seen
+          isSignInClicked: !this.state.isSignInClicked
         });
     };
 
@@ -56,18 +56,8 @@ class PreHeader extends Component {
                         <Pane onClick={this.togglePop.bind(this)}>
                             <a href="/#" className="desktopMenuLink">Sign In</a>
                         </Pane>
-                        {this.state.seen ? <PopUp toggle={this.togglePop.bind(this)} /> : null}
+                        {this.state.isSignInClicked ? <PopUp toggle={this.togglePop.bind(this)} /> : null}
                     </Pane>
-                        {/*<Popover placement="right" positionLeft={200} positionTop={50}
-                            content={
-                                <Pane width={436} height={491} display="flex" alignItems="center" justifyContent="center" flexDirection="column" >
-                                    <TextInput name="text-input-email" placeholder="Email Address" />
-                                    <TextInput name="text-input-password" placeholder="Password" />
-                                </Pane>
-                            }
-                            >
-                            <a href="/#" className="desktopMenuLink">Sign In</a>
-                        </Popover>*/}
                 </Pane>
             </Pane>
         );
