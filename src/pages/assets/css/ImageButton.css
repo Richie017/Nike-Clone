@@ -56,7 +56,7 @@
   flex-direction: column;
   word-wrap: break-word;
   width: 40%;
-  height: 20%;
+  height: 30%;
 }
 
 /*.img-caption {
@@ -73,7 +73,7 @@
 }*/
 
 .btncls {
-  top: 70%;
+  top: 90%;
   position: relative;
 }
 .btn {
@@ -89,7 +89,7 @@
 }
 
 .txt {
-  top: 20%;
+  top: 70%;
   position: relative;
   font-size: 1.2rem;
   color: #edeff5;
@@ -106,7 +106,7 @@
 }
 
 .heading-txt {
-  top: 80%;
+  top: 60%;
   position: relative;
   font-size: 4rem;
   text-transform: uppercase;
@@ -117,9 +117,9 @@
 }
 
 .subheading-txt {
-  top: 60%;
+  top: 80%;
   position: relative;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #edeff5;
   font-weight: 500;
   font-family: Arial, Helvetica, sans-serif;
