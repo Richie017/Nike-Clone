@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
-import './App.css';
-import PreHeader from './components/header/PreHeader';
-import TopNavBar from './components/header/TopNavBar';
-import Trending from './pages/components/Trending';
-import Footer from './components/Footer';
-import Featured from "./pages/components/Featured";
-import SingleImage from "./pages/components/SingleImage";
-import TripleImage from "./pages/components/TripleImage";
+import React, { Component } from "react";
+
+import "./App.css";
+import PreHeader from "./components/header/PreHeader";
+import TopNavBar from "./components/header/TopNavBar";
+import Footer from "./components/Footer";
+import HomePageComponents from "./pages/components/HomePageCompoents";
 
 class App extends Component {
   render() {
@@ -14,10 +12,7 @@ class App extends Component {
       <React.Fragment>
         <PreHeader />
         <TopNavBar />
-        <SingleImage />
-        <Featured />
-        <Trending />
-        <TripleImage />
+        <HomePageComponents />
         <Footer />
       </React.Fragment>
     );
