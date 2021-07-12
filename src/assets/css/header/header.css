@@ -1,22 +1,20 @@
-/*.table {
-  padding: 10px;
-  height: 71px;
-  background-color: #fff;
-  border-color: #ffffff;
-  border: 0;
-  border-radius: 0;
-  color: #000;
-  text-align: center;
-  display: inline-block;
-  font-size: 15px;
-  font-weight: normal;
-}*/
+.main-container {
+  width: 100%;
+}
 
 .subnav {
   float: left;
   overflow: hidden;
   padding: 20px 1px 20px 1px;
   text-align:justify;
+}
+
+.subnav:hover .top-navbar{
+  border-bottom: 2px;
+  border-style: groove;
+  border-color: #000;
+  background-color: #fff;
+  color: #000;
 }
 
 .logo{
@@ -37,24 +35,24 @@
  
 }
 
-.subnav .Topnavbar {
+.subnav .top-navbar {
   font-size: 16px;
   border-color: #fff;
   border: 0;
   border-radius: 0;
   color: #000;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding: 5px;
 }
 
-.Topnavbar:hover {
+/*
+.top-navbar:hover{
   background-color: #fff;
-  border-bottom: 1px;
+  border-bottom: 2px;
   border-style: groove;
   color: #000;
 }
-
-.Topnavbar:focus{
+*/
+.subnav .top-navbar:focus{
   box-shadow: none;
 }
 
@@ -68,10 +66,7 @@
   z-index: 1;
 }
 
-
-
-
-.subnav-content .commonSubCategory {
+.subnav-content .common-subcategory {
   color: #000;
   font-size: 15px;
   text-decoration: none;
@@ -79,7 +74,7 @@
   visibility: visible;
 }
 
-.subnav-content .commonSubSubCategory {
+.subnav-content .common-sub-subcategory {
   color: #555;
   font-size: 14px;
   text-decoration: none;
@@ -87,23 +82,26 @@
   visibility: visible;
 }
 
-.commonSubCategory {
+.common-subcategory {
   visibility: hidden;
 }
 
-.commonSubCategory:focus {
+.subnav-content .common-subcategory:focus {
   box-shadow: none;
 } 
 
-.commonSubSubCategory:focus {
+.subnav-content .common-sub-subcategory:focus {
   box-shadow: none;
 }
 
-.subnav-content .commonSubSubCategory:hover {
+.subnav-content .common-subcategory:hover {
   color:#000;
+  background-color: #fff;
 }
-.subnav-content .commonSubCategory:hover {
-  font-size: 16px;
+
+.subnav-content .common-sub-subcategory:hover {
+  color:#000;
+  background-color: #fff;
 }
 
 .subnav:hover .subnav-content {
@@ -112,21 +110,12 @@
   flex-direction:row;
   justify-content:center;
   position: absolute;
-  top: 10%;
+  top: 100px;
   padding: 20px 20px 20px 20px;
-  font-weight: normal;
+  font-size:22px;
+  transition: opacity 0.2s, visibility 0s linear 0.1s, transform 5s ease;
 }
 
-/*.Topnavbar:hover ~ .commonSubCategory {
-  visibility: visible;
-  text-align: center;
-  background-color: whitesmoke;
-  display: inline-block;
-  position: absolute;
-  left: 1%;
-  right: 1%;
-  top: 8%;
-}*/
 
 .searchbar {
   border-radius: 20px;

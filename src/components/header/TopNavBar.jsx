@@ -1417,7 +1417,6 @@ class Topnavbar extends Component {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          color: "#777"
         }}
       >
         {/*Nike logo*/}
@@ -1435,14 +1434,14 @@ class Topnavbar extends Component {
           >
             {this.state.catagories.map((category) => (
               <Pane className="subnav">
-                <Tab className="Topnavbar" key={category.id} is="a" href="#">
+                <Tab className="top-navbar" key={category.id} is="a" href="#">
                   {category.title}
                 </Tab>
                 <Pane className="subnav-content">
                   {category.subCategory.map((subLink) => (
                     <Pane className="column">
                       <Tab
-                        className="commonSubCategory"
+                        className="common-subcategory"
                         key={subLink.id}
                         is="a"
                         href={subLink.url}
@@ -1451,7 +1450,7 @@ class Topnavbar extends Component {
                       </Tab>
                       {subLink.subsubCategory.map((subsubLink) => (
                         <Tab 
-                        className="commonSubSubCategory"
+                        className="common-sub-subcategory"
                         key={subsubLink.id} 
                         is="a" 
                         href={subsubLink.url}>

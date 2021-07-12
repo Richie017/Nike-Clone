@@ -21,7 +21,7 @@ class Trending extends Component {
         {
           id: "3",
           img_name: "nike-usa",
-          heading: "The New Us women's National Team Kit",
+          heading: "The New US women's National Team Kit",
         },
         /* {
           id: "1",

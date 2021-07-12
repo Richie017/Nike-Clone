@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-
+import {
+    Pane
+  } from "evergreen-ui";
+import './assets/css/header/header.css'
 import './App.css';
 import PreHeader from './components/header/PreHeader';
 import TopNavBar from './components/header/TopNavBar';
@@ -9,12 +12,12 @@ import Footer from './components/Footer';
 class App extends Component {
     render() {
         return (
-            <React.Fragment>
+            <Pane className="main-container">
                 <PreHeader />
                 <TopNavBar />
                 <Trending />
                 <Footer />
-            </React.Fragment>
+            </Pane>
         );
     }
 }
