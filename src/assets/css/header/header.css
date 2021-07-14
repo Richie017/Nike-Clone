@@ -1,82 +1,114 @@
-/*.table {
-  padding: 10px;
-  height: 71px;
-  background-color: #fff;
-  border-color: #ffffff;
-  border: 0;
-  border-radius: 0;
-  color: #000;
-  text-align: center;
-  display: inline-block;
-  font-size: 15px;
-  font-weight: normal;
-}*/
+.main-container {
+  width: 100%;
+}
 
 .subnav {
   float: left;
   overflow: hidden;
-  padding: 20px 2px;
+  padding: 20px 2px 20px 2px;
+  text-align:justify;
 }
 
-.subnav .Topnavbar {
+.subnav:hover .top-navbar{
+  border-bottom: 2px;
+  border-style: groove;
+  border-color: #000;
+  background-color: #fff;
+  color: #000;
+}
+
+.logo{
+  padding:5px 35px;
+}
+
+.logo > a > img:hover {
+  filter: invert(47%) sepia(0%) saturate(2%) hue-rotate(120deg) brightness(96%)
+    contrast(91%);
+}
+
+.column {
+  display: flex;
+  align-items: flex-start; 
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 5px;
+ 
+}
+
+.subnav .top-navbar {
   font-size: 16px;
-  border-color: #ffffff;
+  border-color: #fff;
   border: 0;
   border-radius: 0;
   color: #000;
-  padding: 0px 2px;
+  padding: 5px;
 }
 
-.Topnavbar:hover {
-  background-color: #fff;
-  border-bottom: 1px;
-  border-style: groove;
-  color: #000;
+.subnav .top-navbar:focus{
+  box-shadow: none;
 }
 
 .subnav-content {
   display: none;
   position: absolute;
   left: 0;
-  background-color: whitesmoke;
+  background-color: #fff;
   width: 100%;
+  text-align: left;
   z-index: 1;
 }
 
-.commonSubCategory {
+.subnav-content .common-subcategory {
+  color: #000;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #fff;
+  visibility: visible;
+}
+
+.subnav-content .common-sub-subcategory {
+  color: #555;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #fff;
+  visibility: visible;
+}
+
+.common-subcategory {
   visibility: hidden;
 }
 
-.subnav-content .commonSubCategory {
-  color: #000;
-  font-size: 12px;
-  text-decoration: none;
-  background-color: whitesmoke;
-  visibility: visible;
-  text-align: center;
-  margin-inline: 2%;
+.subnav-content .common-subcategory:focus {
+  box-shadow: none;
+} 
+
+.subnav-content .common-sub-subcategory:focus {
+  box-shadow: none;
 }
 
-/*.subnav-content .commonSubCategory:hover {
-  background-color: whitesmoke;
-  color: black;
-}*/
+.subnav-content .common-subcategory:hover {
+  color:#000;
+  background-color: #fff;
+}
+
+.subnav-content .common-sub-subcategory:hover {
+  color:#000;
+  background-color: #fff;
+}
 
 .subnav:hover .subnav-content {
-  text-align: center;
-  background-color: whitesmoke;
-  display: inline-block;
+  background-color: #fff;
+  display: flex;
+  flex-direction:row;
+  justify-content:center;
   position: absolute;
-  top: 6%;
+  top: 100px;
+  padding: 20px;
+  font-size:22px;
+  transition: opacity 0.2s, visibility 0s linear 0.1s, transform 5s ease;
 }
 
-/*.TopNavBar:hover ~ .commonSubCategory {
-  visibility: visible;
-  text-align: center;
-  background-color: whitesmoke;
-  display: inline-block;
-  position: absolute;
-  left: 1%;
-  right: 1%;
-  top: 8%;
-}*/
+
+.searchbar {
+  border-radius: 20px;
+}
