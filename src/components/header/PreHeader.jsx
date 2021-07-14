@@ -6,6 +6,7 @@ import converseLogo from '../../assets/images/converse_logo_sm.png';
 
 import '../../assets/css/header/preheader.css';
 import PopUp from './SignInPopUp.jsx';
+import SignUp from './SignUp.jsx';
 
 
 class PreHeader extends Component {
@@ -21,12 +22,21 @@ class PreHeader extends Component {
             {id:"0.8", title: "Terms of Use", link: "/#"},
             {id:"0.9", title: "Send Us Feedback", link: "/#"}
         ],
-        isSignInClicked: false
+        isSignInClicked: false,
+        isSignUpClicked: false
     }
 
     togglePop = () => {
         this.setState({
-          isSignInClicked: !this.state.isSignInClicked
+          isSignInClicked: !this.state.isSignInClicked,
+          isSignUpClicked: this.state.isSignUpClicked
+        });
+    };
+
+    toggleSignUp = () => {
+        this.setState({
+          isSignUpClicked: !this.state.isSignUpClicked,
+          isSignInClicked: this.state.isSignInClicked
         });
     };
 
@@ -50,7 +60,12 @@ class PreHeader extends Component {
                         </Pane>
                     </Pane>
                     <span>|</span>
-                    <a href="/#" className="desktopMenuLink">Join Us</a>
+                    <Pane>
+                        <Pane onClick={this.toggleSignUp.bind(this)}>
+                            <a href="/#" className="desktopMenuLink">Join Us</a>
+                        </Pane>
+                        {this.state.isSignUpClicked ? <SignUp toggle={this.toggleSignUp.bind(this)} /> : null}
+                    </Pane>
                     <span>|</span>
                     <Pane>
                         <Pane onClick={this.togglePop.bind(this)}>
