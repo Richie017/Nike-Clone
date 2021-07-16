@@ -37,7 +37,7 @@
     max-width: 100%;
   }
 }
-.figCaption {
+.fig-caption {
   margin: 0;
   padding: 0;
   display: flex;
@@ -49,8 +49,8 @@
   left: 5%;
 }
 
-.figCaption1 {
-  margin: 10px 0px 10px 0;
+.fig-caption-outside {
+  margin: 10px 0px 10px;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -58,19 +58,6 @@
   width: 40%;
   height: 30%;
 }
-
-/*.img-caption {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  word-wrap: break-word;
-  left: 5%;
-  top: 60%;
-  width: 40%;
-  height: 40%;
-  position: absoulte;
-}*/
 
 .btncls {
   top: 90%;

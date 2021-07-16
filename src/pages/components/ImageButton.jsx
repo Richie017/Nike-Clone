@@ -18,9 +18,9 @@ class ImageButton extends Component {
   }
 
   render() {
-    let sub_heading = this.props.sub_heading;
+    let subHeading = this.props.sub_heading;
     const sub_heading_func = () => {
-      if (sub_heading !== "") {
+      if (subHeading !== "") {
         return (
           <Pane>
             <Heading className="heading-txt">{this.props.heading}</Heading>
@@ -44,22 +44,22 @@ class ImageButton extends Component {
       }
     };
 
-    let btn_visibity = this.props.caption;
-    console.log("btn" + btn_visibity);
+    let btnVisibity = this.props.caption;
+
     const btn_func = () => {
-      if (btn_visibity === "out-place") {
+      if (btnVisibity === "out-place") {
         return <Heading className="out-caption">{this.props.heading}</Heading>;
       } else {
         return sub_heading_func();
       }
     };
 
-    const cap_position =
+    const capPosition =
       this.props.caption === "out-place" ? "relative" : "absolute";
-    const cap_class =
-      this.props.caption === "out-place" ? "figCaption1" : "figCaption";
-
-    console.log(cap_position);
+    const capClass =
+      this.props.caption === "out-place"
+        ? "fig-caption-outside"
+        : "fig-caption";
 
     return (
       <Pane className="img-component-container">
@@ -70,7 +70,7 @@ class ImageButton extends Component {
           alt=""
         />
 
-        <Pane className={cap_class} position={cap_position}>
+        <Pane className={capClass} position={capPosition}>
           {btn_func()}
         </Pane>
       </Pane>
