@@ -28,7 +28,7 @@ class ImageButton extends Component {
               {this.props.sub_heading}
             </Heading>
             <Pane className="btncls">
-              <Button className="btn"> Shop </Button>
+              <Button className="btn-white"> Shop </Button>
             </Pane>
           </Pane>
         );
@@ -37,7 +37,7 @@ class ImageButton extends Component {
           <Pane>
             <Heading className="txt">{this.props.heading}</Heading>
             <Pane className="btncls">
-              <Button className="btn"> Shop </Button>
+              <Button className="btn-white"> Shop </Button>
             </Pane>
           </Pane>
         );
