@@ -18,9 +18,24 @@
   top: 25%;
   bottom: 25%;
   width: 500px;
-  height: 700px;
+  height: 800px;
   margin: auto;
   background: white;
+}
+
+.form-close {
+  color: #000;
+  background-color: #fff;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 45px;
+  border: none;
+  padding: 0;
+}
+
+.close-div .form-close:focus {
+  box-shadow: none;
 }
 
 .nike-image {
@@ -61,6 +76,10 @@
   text-align: left;
 }
 
+.user-input .user-input-email:focus {
+  box-shadow: none;
+}
+
 .user-input-password,
 .user-first-name,
 .user-last-name {
@@ -74,44 +93,195 @@
   text-align: left;
 }
 
-/*.user-birth-date {
-  padding: 12px;
-  width: 60%;
+.user-birth-date {
+  width: 220%;
   margin: 12px 0 0;
+  left: 60%;
   display: inline-block;
   position: relative;
-  font-size: 14px;
+  border: 1px solid #d8dae5;
+  border-radius: 4px;
+  font-size: 12px;
+  height: 38px;
   line-height: normal;
-  text-align: left;
+  color: #8d8d8d;
 }
 
-#date {
-  border: 2px solid #0097e6;
-  background: none;
-  display: block;
-  margin: 20px auto;
-  padding: 15px 45px;
-  width: 200px;
-  outline: none;
-  color: black;
-  border-radius: 25px;
+.clear-date {
+  left: 270%;
+}
+
+.member-text {
+  color: #8d8d8d;
+  font-size: 11px;
+  line-height: 16px;
+  margin: 10px 100px;
   text-align: center;
+  font-weight: 400;
 }
-#date:focus {
-  width: 230px;
-  border-color: #6fb98f;
-}*/
 
-/*input[type="date"] {
+.country-select {
+  width: 65%;
+  line-height: 42px;
+
+  display: inline-block;
+  position: relative;
+  border: 1px solid #d8dae5;
+  border-radius: 4px;
+}
+
+.country-options {
+  color: #8d8d8d;
+  font-size: 12px;
+}
+
+/*.gender-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.gender-items-male {
+  width: 45%;
+  margin-right: 5%;
+  text-align: center;
+  position: absolute;
+}
+
+.gender-male-btn {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  color: #8d8d8d;
+  width: 67.5%;
+  font-size: 15px;
+  height: 40px;
+  line-height: 17px;
+  margin: 5px 0 0 75px;
+  overflow: visible;
+}
+
+.gender-items-female {
+  width: 45%;
+  text-align: center;
+  position: absolute;
+}
+
+.gender-female-btn {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  color: #8d8d8d;
+  width: 67.5%;
+  font-size: 15px;
+  height: 40px;
+  line-height: 17px;
+  margin-top: 5px;
+  margin-left: 110%;
+  overflow: visible;
+}
+*/
+
+.gender-div-male {
+  width: 50%;
+  float: left;
+}
+
+.gender-male-btn {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  color: #8d8d8d;
+  width: 63%;
+  font-size: 14px;
+  height: 40px;
+  line-height: 17px;
+  left: 35%;
+  margin: 12px 0 0 0;
   position: relative;
 }
-input[type="date"]::-webkit-calendar-picker-indicator {
-  position: absolute;
-  height: 100%;
+
+.gender-div-male .gender-male-btn:focus {
+  box-shadow: none;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.gender-div-female {
+  position: relative;
+  width: 50%;
+  float: right;
+  line-height: 17px;
+  margin: 12px 0 0 0;
+}
+
+.gender-female-btn {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  color: #8d8d8d;
+  width: 63%;
+  font-size: 14px;
+  height: 40px;
+  line-height: 17px;
+  margin: 0 0 0 5px;
+}
+
+.gender-div-female .gender-female-btn:focus {
+  box-shadow: none;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.sign-up-div {
+  width: 60%;
+  float: left;
+}
+
+.signed-up-email-checkbox {
+  line-height: 17px;
+  left: 30%;
+  position: relative;
+}
+
+.policy-terms-text {
+  clear: both;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  outline: 0;
+  margin: 0 78px;
+  color: #8d8d8d;
+}
+
+.join-us-div {
+  margin: 20px 0;
+  display: inline-block;
+  position: relative;
   width: 100%;
-  opacity: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}*/
+}
+
+.join-us-btn {
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 15px;
+  margin: auto;
+  height: 40px;
+  line-height: 17px;
+  width: 65%;
+}
+
+.bottom-signin-text {
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  margin: 5px 0;
+  color: #8d8d8d;
+}
+
+.bottom-text-link {
+  color: #000;
+}
