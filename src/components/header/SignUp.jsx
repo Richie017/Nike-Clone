@@ -13,7 +13,10 @@ class SignUp extends Component {
         {id:"3", title: "Ukraine"}],
         isSignUpForEmail: true,
         date: null,
-        imgicon: false
+        isMaleClicked: false,
+        isFemaleClicked: false,
+        isMaleDisabled: false,
+        isFemaleDisabled: false
     }
 
     closeHandleClick = () => {
@@ -30,14 +33,29 @@ class SignUp extends Component {
         this.setState({date: dateValue});
     }
 
-    toggleClick = () => {
-        
+    toggleClickMale = () => {
+        this.setState({ 
+            isMaleClicked: !this.state.isMaleClicked,
+            isFemaleClicked: false,
+            isMaleDisabled: true,
+            isFemaleDisabled: false
+        });
+    }
+
+    toggleClickFemale = () => {
+        this.setState({ 
+            isFemaleClicked: !this.state.isFemaleClicked,
+            isMaleClicked: false,
+            isMaleDisabled: false,
+            isFemaleDisabled: true
+        });
     }
 
     render() {
-        const icvis = this.state.imgicon === true ? {TickIcon} : "";
-        console.log(icvis);
-        console.log(this.state.imgicon);
+
+        const maleIcon = this.state.isMaleClicked === true ? TickIcon : "";
+        const femaleIcon = this.state.isFemaleClicked === true ? TickIcon : "";
+    
         return (
             <Pane className="modal-view">
                 <Pane className="modal-content-view">
@@ -70,27 +88,13 @@ class SignUp extends Component {
                             )}
                         </Select>
                     </Pane>
-                    {/*<Pane>
-                        <UnorderedList className="gender-list">
-                            <ListItem className="gender-items-male">
-                                <Button className="gender-male-btn" appearance="none">
-                                    <span>Male</span>
-                                </Button>
-                            </ListItem>
-                            <ListItem className="gender-items-female">
-                                <Button className="gender-female-btn" appearance="none">
-                                    <span>Female</span>
-                                </Button>
-                            </ListItem>
-                        </UnorderedList>
-                    </Pane>*/}
                     <Pane className="gender-div-male">
-                        <Button className="gender-male-btn" appearance="none" onClick={()=>this.setState({ imgicon: !this.state.imgicon })} iconBefore={icvis}>
+                        <Button className="gender-male-btn" appearance="none" onClick={this.toggleClickMale} disabled={this.state.isMaleDisabled} iconBefore={maleIcon}>
                             <span>Male</span>
                         </Button>
                     </Pane>
                     <Pane className="gender-div-female">
-                        <Button className="gender-female-btn" appearance="none">
+                        <Button className="gender-female-btn" appearance="none" onClick={this.toggleClickFemale} disabled={this.state.isFemaleDisabled} iconBefore={femaleIcon}>
                             <span>Female</span>
                         </Button>
                     </Pane>
