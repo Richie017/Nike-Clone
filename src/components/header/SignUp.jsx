@@ -76,8 +76,6 @@ class SignUp extends Component {
                         <TextInput className="user-input-password" placeholder="Password" />
                         <TextInput className="user-first-name" placeholder="First Name" />
                         <TextInput className="user-last-name" placeholder="Last Name" />
-                    </Pane>
-                    <Pane>
                         <DatePicker className="user-birth-date" selected={this.state.date} onChange={(date) => this.setStartDate(date)} placeholderText="Date of Birth" clearButtonClassName="clear-date" isClearable/>
                     </Pane>
                     <Pane className="user-input" display="flex" alignItems="center" justifyContent="center" flexDirection="column" >
