@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "SFUI";
+  src: local("SFUI"), url(../../fonts/SFUI.otf) format("opentype");
+}
+
 .modal-view {
   position: fixed;
   z-index: 1;
@@ -67,13 +72,18 @@
 }
 
 .user-input-email {
-  padding: 20px;
-  width: 65%;
+  padding: 0px 16px;
+  width: 325px;
+  height: 40px;
   display: inline-block;
   position: relative;
   font-size: 14px;
+  font-weight: 600;
   line-height: normal;
   text-align: left;
+  font-family: "SFUI";
+  border: 1px solid #d8dae5;
+  color: #3f3c3c;
 }
 
 .user-input .user-input-email:focus {
@@ -83,32 +93,69 @@
 .user-input-password,
 .user-first-name,
 .user-last-name {
-  padding: 20px;
-  width: 65%;
+  padding: 0px 16px;
+  width: 325px;
+  height: 40px;
   margin: 12px 0 0;
   display: inline-block;
   position: relative;
   font-size: 14px;
+  font-weight: 600;
   line-height: normal;
   text-align: left;
+  font-family: "SFUI";
+  border: 1px solid #d8dae5;
+  color: #3f3c3c;
+}
+
+.user-input .user-input-password:focus {
+  box-shadow: none;
+}
+
+.user-input .user-first-name:focus {
+  box-shadow: none;
+}
+
+.user-input .user-last-name:focus {
+  box-shadow: none;
 }
 
 .user-birth-date {
-  width: 220%;
+  width: 325px;
   margin: 12px 0 0;
-  left: 60%;
+  padding: 0px 16px;
   display: inline-block;
   position: relative;
   border: 1px solid #d8dae5;
   border-radius: 4px;
-  font-size: 12px;
-  height: 38px;
+  font-size: 14px;
+  font-weight: 600;
+  height: 40px;
   line-height: normal;
-  color: #8d8d8d;
+  color: #3f3c3c;
+  font-family: "SFUI";
+  box-sizing: border-box;
+}
+
+.user-input-email::placeholder,
+.user-input-password::placeholder,
+.user-first-name::placeholder,
+.user-last-name::placeholder,
+.user-birth-date::placeholder {
+  color: #3f3c3c;
 }
 
 .clear-date {
-  left: 270%;
+  left: 90%;
+  top: 10% !important;
+}
+
+.clear-date::after {
+  border-radius: 50% !important;
+  color: #fff !important;
+  background-color: #8d8d8d !important;
+  height: 10px !important;
+  width: 11px !important;
 }
 
 .member-text {
@@ -123,7 +170,6 @@
 .country-select {
   width: 65%;
   line-height: 42px;
-
   display: inline-block;
   position: relative;
   border: 1px solid #d8dae5;
@@ -131,8 +177,7 @@
 }
 
 .country-options {
-  color: #8d8d8d;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .gender-div-male {
@@ -142,9 +187,10 @@
 
 .gender-male-btn {
   background-color: #fff;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #d8dae5;
   box-sizing: border-box;
-  color: #8d8d8d;
+  color: #3f3c3c;
+  font-family: "SFUI";
   width: 63%;
   font-size: 14px;
   height: 40px;
@@ -175,9 +221,10 @@
 
 .gender-female-btn {
   background-color: #fff;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #d8dae5;
   box-sizing: border-box;
-  color: #8d8d8d;
+  color: #3f3c3c;
+  font-family: "SFUI";
   width: 63%;
   font-size: 14px;
   height: 40px;
@@ -231,7 +278,9 @@
   color: #fff;
   cursor: pointer;
   display: block;
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "SFUI";
   margin: auto;
   height: 40px;
   line-height: 17px;
