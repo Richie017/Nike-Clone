@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DatePicker from 'react-datepicker';
 import { Pane, TextInput, Select, Button, Checkbox, TickIcon } from 'evergreen-ui';
+import validator from 'validator';
 
 import '../../assets/css/header/signUp.css';
 import "react-datepicker/dist/react-datepicker.css";
@@ -16,7 +17,9 @@ class SignUp extends Component {
         isMaleClicked: false,
         isFemaleClicked: false,
         isMaleDisabled: false,
-        isFemaleDisabled: false
+        isFemaleDisabled: false,
+        emailError: '',
+        emailErrorDisplay: "none"
     }
 
     closeHandleClick = () => {
@@ -28,6 +31,21 @@ class SignUp extends Component {
             isSignUpForEmail: !this.state.isSignUpForEmail
         });
     };
+
+    validateEmail = (e) => {
+        var email = e.target.value
+        if (!validator.isEmail(email)) {
+            this.setState({
+                emailError: 'Please enter a valid email address',
+                emailErrorDisplay: "block"
+            });
+        } else {
+            this.setState({
+                emailError: '',
+                emailErrorDisplay: "none"
+            });
+        }
+    }
 
     setStartDate(dateValue){
         this.setState({date: dateValue});
@@ -72,10 +90,13 @@ class SignUp extends Component {
                         <Pane className="header-text-light">Create your Nike Member profile and get first access to the very best of Nike products, inspiration and community.</Pane>
                     </header>
                     <Pane className="user-input" display="flex" alignItems="center" justifyContent="center" flexDirection="column" >
-                        <TextInput className="user-input-email" placeholder="Email address" />
-                        <TextInput className="user-input-password" placeholder="Password" />
-                        <TextInput className="user-first-name" placeholder="First Name" />
-                        <TextInput className="user-last-name" placeholder="Last Name" />
+                        <Pane>
+                            <TextInput className="user-input-value email" type="email" onChange={(e) => this.validateEmail(e)} placeholder="Email address" />
+                            <Pane className="email-error" display={this.state.emailErrorDisplay}>{this.state.emailError}</Pane>
+                        </Pane>
+                        <TextInput className="user-input-value password" type="password" placeholder="Password" />
+                        <TextInput className="user-input-value fname" placeholder="First Name" />
+                        <TextInput className="user-input-value lname" placeholder="Last Name" />
                         <DatePicker className="user-birth-date" selected={this.state.date} onChange={(date) => this.setStartDate(date)} placeholderText="Date of Birth" clearButtonClassName="clear-date" isClearable/>
                     </Pane>
                     <Pane className="user-input" display="flex" alignItems="center" justifyContent="center" flexDirection="column" >
@@ -87,12 +108,12 @@ class SignUp extends Component {
                         </Select>
                     </Pane>
                     <Pane className="gender-div-male">
-                        <Button className="gender-male-btn" appearance="none" onClick={this.toggleClickMale} disabled={this.state.isMaleDisabled} iconBefore={maleIcon}>
+                        <Button className="gender-btn male" appearance="none" onClick={this.toggleClickMale} disabled={this.state.isMaleDisabled} iconBefore={maleIcon}>
                             <span>Male</span>
                         </Button>
                     </Pane>
                     <Pane className="gender-div-female">
-                        <Button className="gender-female-btn" appearance="none" onClick={this.toggleClickFemale} disabled={this.state.isFemaleDisabled} iconBefore={femaleIcon}>
+                        <Button className="gender-btn female" appearance="none" onClick={this.toggleClickFemale} disabled={this.state.isFemaleDisabled} iconBefore={femaleIcon}>
                             <span>Female</span>
                         </Button>
                     </Pane>
