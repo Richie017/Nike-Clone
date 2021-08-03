@@ -47,30 +47,38 @@
 .header-text {
   font-size: 26px;
   line-height: 26px;
-  margin: 30px 0;
+  margin: 0 0 20px;
   max-width: 25ch;
   text-align: center;
   font-weight: 700;
 }
 
-.input-email {
+.input-text {
   padding: 20px;
   display: inline-block;
-  margin: 0 0 30px;
   position: relative;
   font-size: 14px;
   line-height: normal;
   text-align: left;
 }
 
-.input-password {
-  padding: 20px;
-  display: inline-block;
+.login-email {
+  margin: 0 0 20px;
+}
+
+.input-email-error {
+  color: #fe0000;
+  font-size: 12px;
+  font-family: "SFUI";
+  margin: 0 0 20px;
+}
+
+.login-password {
   margin: 0 0 10px;
-  position: relative;
-  font-size: 14px;
-  line-height: normal;
-  text-align: left;
+}
+
+.user-signin .input-text:focus {
+  box-shadow: none;
 }
 
 .sign-in-div {

@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import { Pane, TextInput, Checkbox, Button } from 'evergreen-ui';
+import validator from 'validator';
 
 import '../../assets/css/header/signInPopUp.css';
 
 class PopUp extends Component {
 
   state = {
-    isKeepMeSignedInChecked: true
+    isKeepMeSignedInChecked: true,
+    inputEmailError: '',
+    inputEmailErrorDisplay: "none"
   }
 
   toggleCheck = () => {
@@ -18,6 +21,21 @@ class PopUp extends Component {
   handleClick = () => {
     this.props.toggle();
   };
+
+  inputEmailValidation = (e) => {
+    var email = e.target.value
+    if (!validator.isEmail(email)) {
+        this.setState({
+          inputEmailError: 'Please enter a valid email address',
+          inputEmailErrorDisplay: "block"
+        });
+    } else {
+        this.setState({
+          inputEmailError: '',
+          inputEmailErrorDisplay: "none"
+        });
+    }
+  }
 
   render() {
     return (
@@ -34,9 +52,12 @@ class PopUp extends Component {
             <Pane className="nike-image"></Pane>
             <Pane className="header-text">YOUR ACCOUNT FOR EVERYTHING NIKE</Pane>
           </header>
-          <Pane display="flex" alignItems="center" justifyContent="center" flexDirection="column" >
-            <TextInput className="input-email" placeholder="Email address" />
-            <TextInput className="input-password" placeholder="Password" />
+          <Pane className="user-signin" display="flex" alignItems="center" justifyContent="center" flexDirection="column" >
+            <Pane>
+              <TextInput className="input-text login-email" type="email" onChange={(e) => this.inputEmailValidation(e)} placeholder="Email address" />
+              <Pane className="input-email-error" display={this.state.inputEmailErrorDisplay}>{this.state.inputEmailError}</Pane>
+            </Pane>
+            <TextInput className="input-text login-password" type="password" placeholder="Password" />
           </Pane>
           <Pane className="sign-in-div">
             <Checkbox className="signed-in-checkbox" checked={this.state.isKeepMeSignedInChecked} label="Keep me signed in" onChange={this.toggleCheck.bind(this)} />
