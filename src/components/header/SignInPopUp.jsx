@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Pane, TextInput, Checkbox, Button } from 'evergreen-ui';
 import validator from 'validator';
 
-import '../../assets/css/header/signInPopUp.css';
+import '../../assets/css/header/signinpopup.css';
 
 class PopUp extends Component {
 
