@@ -3,10 +3,10 @@ import DatePicker from 'react-datepicker';
 import { Pane, TextInput, Select, Button, Checkbox, TickIcon } from 'evergreen-ui';
 import validator from 'validator';
 
-import '../../assets/css/header/signUp.css';
+import '../../assets/css/header/signuppopup.css';
 import "react-datepicker/dist/react-datepicker.css";
 
-class SignUp extends Component {
+class SignUpPopUp extends Component {
 
     state = {
         countryName: [{id:"1", title: "Bangladesh"},
@@ -22,7 +22,7 @@ class SignUp extends Component {
         emailErrorDisplay: "none"
     }
 
-    closeHandleClick = () => {
+    closeFormClick = () => {
         this.props.toggle();
     };
 
@@ -78,7 +78,7 @@ class SignUp extends Component {
             <Pane className="modal-view">
                 <Pane className="modal-content-view">
                     <Pane className="close-div">
-                        <Button className="form-close" onClick={this.closeHandleClick.bind(this)} appearance="none">
+                        <Button className="form-close" onClick={this.closeFormClick.bind(this)} appearance="none">
                             <span>
                                 &times;
                             </span>
@@ -95,8 +95,8 @@ class SignUp extends Component {
                             <Pane className="email-error" display={this.state.emailErrorDisplay}>{this.state.emailError}</Pane>
                         </Pane>
                         <TextInput className="user-input-value password" type="password" placeholder="Password" />
-                        <TextInput className="user-input-value fname" placeholder="First Name" />
-                        <TextInput className="user-input-value lname" placeholder="Last Name" />
+                        <TextInput className="user-input-value name" placeholder="First Name" />
+                        <TextInput className="user-input-value name" placeholder="Last Name" />
                         <DatePicker className="user-birth-date" selected={this.state.date} onChange={(date) => this.setStartDate(date)} placeholderText="Date of Birth" clearButtonClassName="clear-date" isClearable/>
                     </Pane>
                     <Pane className="user-input" display="flex" alignItems="center" justifyContent="center" flexDirection="column" >
@@ -139,4 +139,4 @@ class SignUp extends Component {
     }
 }
  
-export default SignUp;
+export default SignUpPopUp;

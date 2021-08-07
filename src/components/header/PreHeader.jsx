@@ -6,7 +6,7 @@ import converseLogo from '../../assets/images/converse_logo_sm.png';
 
 import '../../assets/css/header/preheader.css';
 import PopUp from './SignInPopUp.jsx';
-import SignUp from './SignUp.jsx';
+import SignUpPopUp from './SignUpPopUp.jsx';
 
 
 class PreHeader extends Component {
@@ -64,7 +64,7 @@ class PreHeader extends Component {
                         <Pane onClick={this.toggleSignUp.bind(this)}>
                             <a href="/#" className="desktopMenuLink">Join Us</a>
                         </Pane>
-                        {this.state.isSignUpClicked ? <SignUp toggle={this.toggleSignUp.bind(this)} /> : null}
+                        {this.state.isSignUpClicked ? <SignUpPopUp toggle={this.toggleSignUp.bind(this)} /> : null}
                     </Pane>
                     <span>|</span>
                     <Pane>

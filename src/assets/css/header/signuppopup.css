@@ -71,7 +71,6 @@
   text-align: center;
   font-weight: 400;
 }
-
 .user-input-value {
   padding: 0px 16px;
   width: 325px;
@@ -82,28 +81,24 @@
   font-weight: 600;
   line-height: normal;
   text-align: left;
-  font-family: "SFUI";
   border: 1px solid #d8dae5;
   color: #3f3c3c;
 }
 
 .user-input .email:focus,
 .user-input .password:focus,
-.user-input .fname:focus,
-.user-input .lname:focus {
+.user-input .name:focus {
   box-shadow: none;
 }
 
 .email-error {
   color: #fe0000;
   font-size: 12px;
-  font-family: "SFUI";
   margin: 10px 0 0;
 }
 
 .password,
-.fname,
-.lname {
+.name {
   margin: 12px 0 0;
 }
 
@@ -120,7 +115,6 @@
   height: 40px;
   line-height: normal;
   color: #3f3c3c;
-  font-family: "SFUI";
   box-sizing: border-box;
 }
 
@@ -174,7 +168,6 @@
   border: 1px solid #d8dae5;
   box-sizing: border-box;
   color: #3f3c3c;
-  font-family: "SFUI";
   width: 63%;
   font-size: 14px;
   height: 40px;
@@ -248,7 +241,6 @@
   display: block;
   font-size: 14px;
   font-weight: 600;
-  font-family: "SFUI";
   margin: auto;
   height: 40px;
   line-height: 17px;
