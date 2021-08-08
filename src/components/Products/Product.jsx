@@ -4,7 +4,7 @@ import "../../assets/css/products/product.css";
 
 export default class Product extends Component {
   render() {
-    const { name, type, tag, img, color, size, price } = this.props;
+    const { name, type, tag, img, color, price } = this.props;
 
     return (
       <Pane className="product">

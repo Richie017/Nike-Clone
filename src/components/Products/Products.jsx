@@ -4,7 +4,7 @@ import Product from "./Product";
 import {
     Pane,
   } from "evergreen-ui";
-  import "../../assets/css/products/product.css";
+import "../../assets/css/products/product.css";
   
 export default class Products extends Component {
    

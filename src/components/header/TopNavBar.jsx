@@ -67,9 +67,9 @@ class Topnavbar extends Component {
                       </Tab>
                       {subLink.subsubCategory.map((subsubLink) => (
                         <Tab 
-                        className="common-sub-subcategory"
+                        
                         key={subsubLink.id} >
-                          <NavLink exact to={{pathname: subsubLink.url}} style={{textDecoration: 'none'}}>{subsubLink.title}</NavLink>
+                          <NavLink exact to={{pathname: subsubLink.url}} className="common-sub-subcategory">{subsubLink.title}</NavLink>
                         </Tab>
                       ))}
                     </Pane>
