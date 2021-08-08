@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import "./App.css";
 import PreHeader from "./components/header/PreHeader";
 import TopNavBar from "./components/header/TopNavBar";
 import Banner from "./components/header/Banner";
 import Footer from "./components/Footer";
-import Productpage from "./pages/Products/Productpage";
+import Productpage from "./pages/Products/ProductPage";
 import HomePageComponents from "./pages/components/HomePageCompoents";
 
 class App extends Component {
@@ -21,9 +21,8 @@ class App extends Component {
                 <Route exact path="/">
                     <HomePageComponents />
                 </Route>
-                <Route exact path="/:category">
-                    <Productpage />
-                </Route>
+                <Route exact path="/:category" render={(props) => <Productpage {...props} /> } />
+
                {/* <Route exact path="/:category/:subcategory">
                     <Productpage />
                 </Route>
