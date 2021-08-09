@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Pane, Heading } from "evergreen-ui";
-import ImageButton from "./ImageButton";
+import ImageButton from "../../components/ImageButton";
 
 class HomePageComponents extends Component {
   constructor() {
