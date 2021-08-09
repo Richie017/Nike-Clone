@@ -1,7 +1,7 @@
 .container {
   max-width: 1870px;
   height: fit-content;
-  margin: 5px 20px 20px 20px;
+  margin: 5px 20px 10px 20px;
 }
 
 .header-img {
@@ -16,13 +16,13 @@
 .img-container {
   display: flex;
   flex-direction: row;
-  margin: 5px 0px 150px 5px;
+  margin: 5px 0px 40px 5px;
 }
 .img-component-container {
   height: auto;
   width: 100%;
   position: relative;
-  margin: 5px 5px 20px 5px;
+  margin: 5px 5px 10px 5px;
 }
 
 .img-component-container img {
