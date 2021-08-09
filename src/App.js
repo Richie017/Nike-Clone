@@ -5,8 +5,8 @@ import PreHeader from "./components/header/PreHeader";
 import TopNavBar from "./components/header/TopNavBar";
 import Banner from "./components/header/Banner";
 import Footer from "./components/Footer";
+import HomePageComponents from "./pages/home/model/HomePageComponents";
 import ProductPage from "./pages/products/ProductPage";
-import HomePageComponents from "./pages/components/HomePageCompoents";
 
 class App extends Component {
   render() {
