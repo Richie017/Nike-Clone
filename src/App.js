@@ -5,7 +5,7 @@ import PreHeader from "./components/header/PreHeader";
 import TopNavBar from "./components/header/TopNavBar";
 import Banner from "./components/header/Banner";
 import Footer from "./components/Footer";
-import Productpage from "./pages/Products/ProductPage";
+import ProductPage from "./pages/products/ProductPage";
 import HomePageComponents from "./pages/components/HomePageCompoents";
 
 class App extends Component {
@@ -17,26 +17,21 @@ class App extends Component {
           <TopNavBar />
           <Banner />
 
-            <Switch>
-                <Route exact path="/">
-                    <HomePageComponents />
+          <Switch>
+            <Route exact path="/">
+                <HomePageComponents />
                 </Route>
-                <Route exact path="/:category" render={(props) => <Productpage {...props} /> } />
+                <Route exact path="/:category" render={(props) => <ProductPage {...props} /> } />
 
                {/* <Route exact path="/:category/:subcategory">
-                    <Productpage />
+                    <ProductPage />
                 </Route>
                 <Route exact path="/:category/:subcategory/:subsubcategory">
-<<<<<<< HEAD
-                    <Products />
+                    <products />
                 </Route>
-
-=======
-                    <Productpage />
+                    <ProductPage />
                 </Route>*/}
-             
->>>>>>> f5ceb57 (add: initial structure for product pages)
-            </Switch>
+          </Switch>
 
           <Footer />
         </Router>
