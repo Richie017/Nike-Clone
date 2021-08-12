@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Categorydata} from "../../data/Categorydata";
+import {CategoryData} from "../../data/CategoryData";
 import { NavLink} from 'react-router-dom';
 import {
   Pane,
@@ -15,13 +15,12 @@ import {
 import nike from "../../assets/images/nike.png";
 import "../../assets/css/header/header.css";
 
-class Topnavbar extends Component {
-  //state declaration
+class TopNavBar extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-     categories: [...Categorydata]
+     categories: [...CategoryData]
     };
   }
 
@@ -80,7 +79,7 @@ class Topnavbar extends Component {
           </TabNavigation>
         </Pane>
 
-        {/*Seachbar, bookmarkbtn, cartbtn*/}
+        {/*Searchbar, bookmarkbtn, cartbtn*/}
         <Pane>
           <SearchInput placeholder="SEARCH" width="160px" className="searchbar"/>
 
@@ -102,4 +101,4 @@ class Topnavbar extends Component {
   }
 }
 
-export default Topnavbar;
+export default TopNavBar;

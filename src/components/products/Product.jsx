@@ -10,7 +10,7 @@ export default class Product extends Component {
       <Pane className="product">
         <img
           className="product-img"
-          src={require("../../pages/assets/images/Products/" + img)?.default}
+          src={require("../../pages/assets/images/products/" + img)?.default}
           alt=""
         />
         <Pane >

@@ -1,4 +1,4 @@
-export const Categorydata = [
+export const CategoryData = [
   {
     id: 1,
     title: "New Releases",

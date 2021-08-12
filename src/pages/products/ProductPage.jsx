@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Products from "../../components/Products/Products";
-import ProductNav from "../../components/Products/ProductNav";
-import { Productdata } from "../../data/Productdata";
+import Products from "../../components/products/Products";
+import ProductNav from "../../components/products/ProductNav";
+import { ProductData } from "../../data/ProductData";
 import { Pane, Select, Button, Heading , MinimizeIcon} from "evergreen-ui";
 import "../../assets/css/products/product.css";
 
@@ -9,8 +9,8 @@ export default class ProductPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      products: [...Productdata],
-      shownavbar: true
+      products: [...ProductData],
+      showNavBar: true
     };
   }
 
@@ -25,7 +25,7 @@ export default class ProductPage extends Component {
           </Pane>
           <Pane>
           
-            <Button className="menu-hide-btn" marginRight={16} onClick={(e) => this.setState(prevState => ({shownavbar: !prevState.shownavbar}))}>Hide Filters<MinimizeIcon color="muted" size={12} marginLeft={10} /></Button>
+            <Button className="menu-hide-btn" marginRight={16} onClick={(e) => this.setState(prevState => ({showNavBar: !prevState.showNavBar}))}>Hide Filters<MinimizeIcon color="muted" size={12} marginLeft={10} /></Button>
             <Select onChange={(event) => event.target.value}>
               <option value="1">
                 Featured
@@ -37,7 +37,7 @@ export default class ProductPage extends Component {
           </Pane>
         </Pane>
         <Pane style={{ display: "flex" }}>
-        { this.state.shownavbar ?  <ProductNav products={this.state.products} /> : null }
+        { this.state.showNavBar ?  <ProductNav products={this.state.products} /> : null }
          
           <Products products={this.state.products} />
         </Pane>
