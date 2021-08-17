@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import {CategoryData} from "../../data/CategoryData";
-import { NavLink} from 'react-router-dom';
+import { CategoryData } from "../../data/CategoryData";
+import { NavLink } from "react-router-dom";
 import {
   Pane,
   TabNavigation,
@@ -10,7 +10,7 @@ import {
   ShoppingCartIcon,
   HeartIcon,
   Tooltip,
-  majorScale
+  majorScale,
 } from "evergreen-ui";
 import nike from "../../assets/images/nike.png";
 import "../../assets/css/header/header.css";
@@ -20,12 +20,8 @@ class TopNavBar extends Component {
     super(props);
 
     this.state = {
-     categories: [...CategoryData]
+      categories: [...CategoryData],
     };
-  }
-
-  componentDidMount(){
-    console.log(this.state.categories);
   }
 
   render() {
@@ -38,7 +34,9 @@ class TopNavBar extends Component {
       >
         {/*Nike logo*/}
         <Pane className="logo">
-          <a href="/"><img src={nike} alt=""/></a>
+          <a href="/">
+            <img src={nike} alt="" />
+          </a>
         </Pane>
 
         {/*Category & Subcategory*/}
@@ -46,29 +44,48 @@ class TopNavBar extends Component {
           <TabNavigation
             style={{
               textAlign: "center",
-              paddingLeft: "30px"
+              paddingLeft: "30px",
             }}
           >
             {this.state.categories.map((category) => (
               <Pane className="subnav">
                 <Tab className="top-navbar" key={category.id}>
-                  <NavLink exact to = {{pathname: category.url}} 
-                  style={{color: "#000", textDecoration: 'none'}}>{category.title}</NavLink>
+                  <NavLink
+                    exact
+                    to={{ pathname: category.url, headdata: category.title }}
+                    style={{ color: "#000", textDecoration: "none" }}
+                  >
+                    {category.title}
+                  </NavLink>
                 </Tab>
                 <Pane className="subnav-content">
                   {category.subCategory.map((subLink) => (
                     <Pane className="column">
-                      <Tab
-                        className="common-subcategory"
-                        key={subLink.id}
-                      >
-                         <NavLink exact to={{pathname: subLink.url}} style={{color: "#000", textDecoration: 'none'}}>{subLink.title}</NavLink>
+                      <Tab className="common-subcategory" key={subLink.id}>
+                        <NavLink
+                          exact
+                          to={{
+                            pathname: category.url + subLink.url,
+                            headdata: subLink.title,
+                          }}
+                          style={{ color: "#000", textDecoration: "none" }}
+                        >
+                          {subLink.title}
+                        </NavLink>
                       </Tab>
                       {subLink.subsubCategory.map((subsubLink) => (
-                        <Tab 
-                        
-                        key={subsubLink.id} >
-                          <NavLink exact to={{pathname: subsubLink.url}} className="common-sub-subcategory">{subsubLink.title}</NavLink>
+                        <Tab key={subsubLink.id}>
+                          <NavLink
+                            exact
+                            to={{
+                              pathname:
+                                category.url + subLink.url + subsubLink.url,
+                              headdata: subsubLink.title,
+                            }}
+                            className="common-sub-subcategory"
+                          >
+                            {subsubLink.title}
+                          </NavLink>
                         </Tab>
                       ))}
                     </Pane>
@@ -81,7 +98,11 @@ class TopNavBar extends Component {
 
         {/*Searchbar, bookmarkbtn, cartbtn*/}
         <Pane>
-          <SearchInput placeholder="SEARCH" width="160px" className="searchbar"/>
+          <SearchInput
+            placeholder="SEARCH"
+            width="160px"
+            className="searchbar"
+          />
 
           <Tooltip content="Add to Bookmark">
             <IconButton

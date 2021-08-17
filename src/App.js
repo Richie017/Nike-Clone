@@ -24,30 +24,33 @@ class App extends Component {
             <Route exact path="/">
               <HomePageComponents />
             </Route>
+              <Route exact path="/men">
+                  <MenPage />
+              </Route>
+              <Route exact path="/women">
+                  <WomenPage />
+              </Route>
+              <Route exact path="/kids">
+                  <KidsPage />
+              </Route>
 
-            <Route exact path="/men">
-              <MenPage />
-            </Route>
-            <Route exact path="/women">
-              <WomenPage />
-            </Route>
-            <Route exact path="/kids">
-              <KidsPage />
-            </Route>
             <Route
               exact
               path="/:category"
               render={(props) => <ProductPage {...props} />}
             />
 
-            {/* <Route exact path="/:category/:subcategory">
-                    <ProductPage />
-                </Route>
-                <Route exact path="/:category/:subcategory/:subsubcategory">
-                    <products />
-                </Route>
-                    <ProductPage />
-                </Route>*/}
+            <Route
+              exact
+              path="/:category/:subcategory"
+              render={(props) => <ProductPage {...props} />}
+            />
+
+            <Route
+              exact
+              path="/:category/:subcategory/:subsubcategory"
+              render={(props) => <ProductPage {...props} />}
+            />
           </Switch>
 
           <Footer />
