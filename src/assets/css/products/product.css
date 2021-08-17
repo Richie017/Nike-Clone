@@ -3,8 +3,20 @@
   padding: 10px;
 }
 
+.product-nonav {
+  display: none;
+  padding: 10px;
+}
+
 .products {
   width: 84%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.products-nonav {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   margin: 10px;

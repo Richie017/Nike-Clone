@@ -13,14 +13,13 @@ export default class Product extends Component {
           src={require("../../pages/assets/images/products/" + img)?.default}
           alt=""
         />
-        <Pane >
+        <Pane>
           <Pane className="product-tag">{tag ? tag : null}</Pane>
           <Pane className="product-name">{name}</Pane>
           <Pane className="product-type">{type}</Pane>
           <Pane className="product-color">{color.length} color</Pane>
           <Pane className="product-price">${price} </Pane>
         </Pane>
-
       </Pane>
     );
   }
