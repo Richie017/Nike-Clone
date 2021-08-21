@@ -2,90 +2,23 @@ import React, { Component } from "react";
 import { Pane, Heading, Tab, Text, TabNavigation } from "evergreen-ui";
 import { NavLink } from "react-router-dom";
 import ImageButton from "../components/ImageButton";
+import {
+  landing_images,
+  featured_images,
+  explored_images,
+  trending_images,
+  categories,
+} from "../../data/ImageData";
 
-class ManPage extends Component {
+class KidsPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      landing_images: [
-        {
-          id: "1",
-          img_name: "Men_Landing",
-          heading: "Layer On The Heat",
-          sub_heading:
-            "Stack up on miss-and-match styles and warm things up this fall",
-        },
-      ],
-      featured_images: [
-        {
-          id: "1",
-          img_name: "featured_men",
-          heading: "Always On Repeat",
-          sub_heading:
-            "Shoes under $100 & under, featuring the Nike court legacy",
-        },
-      ],
-      trending_images: [
-        {
-          id: "1",
-          img_name: "shoe-1",
-          heading: "Nike Football Impulse Pack",
-          sub_heading: "",
-        },
-        {
-          id: "2",
-          img_name: "liverpool-1",
-          heading: "Liverpool FC 2021/22 Home Jersey",
-          sub_heading: "",
-        },
-      ],
-      explored_images: [
-        {
-          id: "1",
-          img_name: "jacket",
-          heading: "Clothing",
-          sub_heading: "",
-          caption: "out-place",
-        },
-        {
-          id: "2",
-          img_name: "shoes",
-          heading: "Footwear",
-          sub_heading: "",
-          caption: "out-place",
-        },
-        {
-          id: "3",
-          img_name: "bagpack",
-          heading: "Accessories",
-          sub_heading: "",
-          caption: "out-place",
-        },
-        {
-          id: "4",
-          img_name: "bagpack",
-          heading: "Accessories",
-          sub_heading: "",
-          caption: "out-place",
-        },
-      ],
-      categories: [
-        {
-          id: "1",
-          title: "Shoes",
-          url: "/#",
-        },
-        {
-          id: "2",
-          title: "Clothing",
-          url: "/#",
-        },
-        {
-          id: "1",
-          title: "Sales",
-          url: "/#",
-        },
-      ],
+      landing_images: [...landing_images],
+      featured_images: [...featured_images],
+      explored_images: [...explored_images],
+      trending_images: [...trending_images],
+      categories: [...categories],
     };
   }
 
@@ -93,7 +26,7 @@ class ManPage extends Component {
     return (
       <Pane>
         <Pane className="landing-nav">
-          <Text className="landing-nav-txt">Men</Text>
+          <Text className="landing-nav-txt">Kids</Text>
 
           <Pane classnName="landing-nav-pane">
             <TabNavigation
@@ -186,4 +119,4 @@ class ManPage extends Component {
   }
 }
 
-export default ManPage;
+export default KidsPage;
