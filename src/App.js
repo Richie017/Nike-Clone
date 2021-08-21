@@ -7,9 +7,9 @@ import Banner from "./components/header/Banner";
 import Footer from "./components/Footer";
 import HomePageComponents from "./pages/home/model/HomePageComponents";
 import ProductPage from "./pages/products/ProductPage";
-import ManPage from "./pages/ManPage/ManPage";
-import WomenPage from "./pages/WomenPage/WomenPage";
-import KidPage from "./pages/KidPage/KidPage";
+import MenPage from "./pages/Men/MenPage";
+import WomenPage from "./pages/Women/WomenPage";
+import KidsPage from "./pages/Kids/KidsPage";
 
 class App extends Component {
   render() {
@@ -26,13 +26,13 @@ class App extends Component {
             </Route>
 
             <Route exact path="/men">
-              <ManPage />
+              <MenPage />
             </Route>
             <Route exact path="/women">
               <WomenPage />
             </Route>
             <Route exact path="/kids">
-              <KidPage />
+              <KidsPage />
             </Route>
             <Route
               exact
