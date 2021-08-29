@@ -54,9 +54,12 @@ export default class ProductNav extends Component {
   }
 
   render() {
+    const productnavclass = this.props.shownav
+      ? "product-nav"
+      : "product-nonav";
 
     return (
-      <Pane className="product-filter-modal">
+      <Pane className={productnavclass}>
         <Pane className="product-subcateogry-links">
           <UnorderedList className="subcategory-list-items">
             {this.state.subCategoryLinks.map((subCategory) => (
