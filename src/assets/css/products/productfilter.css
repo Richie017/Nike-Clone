@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "SFUI";
+  src: local("SFUI"), url(../../fonts/SFUI.otf) format("opentype");
+}
+
+.product-subcateogry-links {
+  width: 100%;
+  padding: 0px 50px 0px 35px;
+}
+
+.subcategory-list-items {
+  list-style: none;
+  margin: 0px;
+}
+
+.subcategory-list-items .filter-list-items {
+  margin: 0px;
+}
+
+.subcategory-list-items .filter-list-items .filter-list-tags {
+  display: block;
+  color: #111;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 8px 0px;
+  line-height: 20px;
+}
+
+.subcategory-list-items .filter-list-items .filter-list-tags:hover {
+  color: #757575;
+}
+
+.filter-view {
+  width: 70%;
+  margin: 15px 50px 0px 35px;
+  border-top: 1px solid #d8dae5;
+}
+
+.more-visibility-btn,
+.filter-visibility-btn {
+  width: 100%;
+  border: none;
+  justify-content: left;
+  font-size: 15px;
+  color: #111;
+}
+
+.filter-visibility-btn {
+  padding: 10px 0 0;
+}
+
+.filter-icon-btn {
+  border: none;
+}
+
+.more-visibility-div .more-visibility-btn:hover,
+.more-visibility-div .more-visibility-btn:focus,
+.filter-view .filter-icon-btn:hover,
+.filter-view .filter-icon-btn:focus,
+.filter-view .filter-visibility-btn:hover,
+.filter-view .filter-visibility-btn:focus {
+  box-shadow: none;
+  border: none;
+  background-color: white;
+}
+
+.filter-visibility-btn > div {
+  margin-right: 0;
+  margin-left: 60%;
+}
+
+.filter-checkbox {
+  width: 100%;
+  padding: 0;
+}
+
+.checkbox-items {
+  margin: 15px 0 20px;
+}
+
+.checkbox-items > span {
+  font-size: 15px;
+  color: #000;
+}
+
+.checkbox-items > span:hover {
+  color: #757575;
+}
+
+.more-visibility-btn {
+  padding: 0 0 0 5px;
+}
