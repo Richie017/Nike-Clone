@@ -5,21 +5,19 @@
 
 .product-nonav {
   display: none;
-  padding: 10px;
 }
 
 .products {
   width: 84%;
   display: flex;
   flex-wrap: wrap;
-  margin: 10px;
+  padding-left: 10px;
 }
 
 .products-nonav {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin: 10px;
 }
 
 .product {
@@ -31,7 +29,7 @@
 }
 
 .product-img {
-  width: auto;
+  width: 100%;
   height: auto;
   object-fit: cover;
 }

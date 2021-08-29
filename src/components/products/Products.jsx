@@ -19,6 +19,7 @@ export default class Products extends Component {
             color={product.color}
             size={product.size}
             price={product.price}
+            category={this.props.category}
           />
         ))}
       </Pane>
