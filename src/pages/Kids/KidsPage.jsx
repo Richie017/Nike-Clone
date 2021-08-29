@@ -29,12 +29,7 @@ class KidsPage extends Component {
           <Text className="landing-nav-txt">Kids</Text>
 
           <Pane classnName="landing-nav-pane">
-            <TabNavigation
-              style={{
-                textAlign: "center",
-                paddingLeft: "30px",
-                marginLeft: "700px",
-              }}>
+            <TabNavigation>
               <Pane className="navbar">
                 {this.state.categories.map((tab) => (
                   <Tab className="navbar-tab" key={tab.id}>
@@ -49,6 +44,8 @@ class KidsPage extends Component {
               </Pane>
             </TabNavigation>
           </Pane>
+
+          <Text style={{color: "#fff"}}>Men</Text>
         </Pane>
         <Pane className="container">
           <Pane className="img-container">

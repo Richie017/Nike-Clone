@@ -115,6 +115,7 @@
 
 .landing-nav {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   background-color: #fff;
   margin: 10px 70px 10px;
@@ -127,6 +128,7 @@
 
 .landing-nav-txt {
   font-size: 1.5rem;
+  padding-top: 5px;
 }
 
 .navbar {

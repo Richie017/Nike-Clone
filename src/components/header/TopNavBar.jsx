@@ -52,7 +52,7 @@ class TopNavBar extends Component {
                 <Tab className="top-navbar" key={category.id}>
                   <NavLink
                     exact
-                    to={{ pathname: category.url, headdata: category.title }}
+                    to={{ pathname: category.url,  state: {headdata: category.title} }}
                     style={{ color: "#000", textDecoration: "none" }}
                   >
                     {category.title}
@@ -65,9 +65,7 @@ class TopNavBar extends Component {
                         <NavLink
                           exact
                           to={{
-                            pathname: category.url + subLink.url,
-                            headdata: subLink.title,
-                          }}
+                            pathname: subLink.url, state: {headdata: subLink.title} }}
                           style={{ color: "#000", textDecoration: "none" }}
                         >
                           {subLink.title}
@@ -78,10 +76,7 @@ class TopNavBar extends Component {
                           <NavLink
                             exact
                             to={{
-                              pathname:
-                                category.url + subLink.url + subsubLink.url,
-                              headdata: subsubLink.title,
-                            }}
+                              pathname: subsubLink.url, state: {headdata: subsubLink.title}}}
                             className="common-sub-subcategory"
                           >
                             {subsubLink.title}
