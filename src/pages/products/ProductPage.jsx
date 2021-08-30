@@ -38,8 +38,7 @@ export default class ProductPage extends Component {
                 this.setState((prevState) => ({
                   showNavBar: !prevState.showNavBar,
                 }))
-              }
-            >
+              }>
               {this.state.showNavBar ? "Hide Filters" : "Show Filters"}
               {this.state.showNavBar ? (
                 <MinimizeIcon color="muted" size={12} marginLeft={10} />

@@ -1,0 +1,156 @@
+.main-container {
+  width: 100%;
+  padding: 10px;
+}
+.main-section {
+  display: flex;
+  width: inherit;
+  height: 70%;
+}
+
+.img-section {
+  padding-left: 10%;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.img-holder {
+  flex: 45%;
+  margin: 5px;
+  max-width: 45%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.details-section {
+  width: 20%;
+  height: 100%;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.details-section > * {
+  margin-bottom: 30px;
+}
+
+.product-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.name-type {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+}
+
+.productdetails-type {
+  font-size: 20px;
+}
+.productdetails-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.productdetails-price {
+  font-size: 15px;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-size {
+  display: flex;
+  flex-direction: column;
+}
+
+.size-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.size-div {
+  width: 20%;
+  height: 20%;
+  text-align: center;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #a8a8a8;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.size-div:hover {
+  border: 1px solid #080808;
+}
+
+.image-button {
+  display: inline-block;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+  width: 70px;
+  margin: 5px;
+  border: 1px solid #080808;
+}
+
+.image-button:focus {
+  display: inline-block;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+  width: 70px;
+  margin: 5px;
+  border: 2px solid #080808;
+}
+
+.image-button img {
+  display: inline-block;
+  height: 76px;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+  width: 66px;
+}
+.black-btn {
+  background-color: #080808;
+  width: 100%;
+  color: white;
+  padding: 20px;
+  border-radius: 30px;
+  border: none;
+  font-size: 15px;
+  margin: 5px 0 5px 0;
+}
+
+.white-btn {
+  background-color: white;
+  width: 100%;
+  color: #080808;
+  padding: 20px;
+  border-radius: 30px;
+  border: 1px solid #080808;
+  font-size: 15px;
+  margin: 5px 0 5px 0;
+}
+
+.static-section > * {
+  margin: 15px 0 15px 0;
+}
+.toggle-btn {
+  width: 100%;
+  border: none;
+  justify-content: left;
+  font-size: 15px;
+  color: #111;
+}
+.toggle-icon {
+  border: none;
+}
