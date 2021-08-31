@@ -3,15 +3,15 @@ import {
   Pane,
   HeartIcon,
   Button,
-  UnorderedList,
-  ListItem,
   CaretUpIcon,
   CaretDownIcon,
 } from "evergreen-ui";
-import ImageGallery from "./ImageGallery";
-import ProductName from "./ProductName";
-import ProductSize from "./ProductSize";
-import ProductColor from "./ProductColor";
+import ImageGallery from "../../components/products/ImageGallery";
+import ProductName from "../../components/products/ProductName";
+import ProductSize from "../../components/products/ProductSize";
+import ProductColor from "../../components/products/ProductColor";
+import ProductDescription from "../../components/products/ProductDescription";
+import ProductReview from "../../components/products/ProductReview";
 import "../../assets/css/productdetails/productdetails.css";
 
 export default class ProductDetails extends Component {
@@ -65,32 +65,28 @@ export default class ProductDetails extends Component {
                   <a href="/#">Find a Store</a>
                 </p>
               </Pane>
-              <Pane className="product-description">
-                <Pane>{description}</Pane>
-                <UnorderedList marginTop={20}>
-                  <ListItem color="black" fontSize={15}>
-                    Shown: {color[colorIndex].shown}
-                  </ListItem>
-                  <ListItem color="black" fontSize={15}>
-                    Style: {color[colorIndex].style}
-                  </ListItem>
-                </UnorderedList>
-                <a href="/#">View Product Details</a>
-              </Pane>
+              <ProductDescription
+                description={description}
+                color={color}
+                colorIndex={colorIndex}
+              />
               <Pane>
-                <Pane display="flex">
-                  <Button
-                    className="toggle-btn"
-                    onClick={this.toggleVisibility}>
-                    Free Shipping & Returns
-                  </Button>
-                  <Button
-                    className="toggle-icon"
-                    onClick={this.toggleVisibility}
-                    iconAfter={
-                      visibility === true ? CaretUpIcon : CaretDownIcon
-                    }
-                  />
+                <Pane className="toggle-view">
+                  <Pane display="flex" marginBottom={15}>
+                    <Button
+                      className="toggle-btn"
+                      onClick={this.toggleVisibility}>
+                      Free Shipping & Returns
+                    </Button>
+                    <Button
+                      className="toggle-icon"
+                      onClick={this.toggleVisibility}
+                      iconAfter={
+                        visibility === true ? CaretUpIcon : CaretDownIcon
+                      }
+                    />
+                  </Pane>
+
                   {visibility && (
                     <Pane>
                       Free standard shipping and free 60-day returns for Nike
@@ -103,6 +99,7 @@ export default class ProductDetails extends Component {
                   )}
                 </Pane>
               </Pane>
+              <ProductReview />
             </Pane>
           </Pane>
         </Pane>

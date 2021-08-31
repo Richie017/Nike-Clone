@@ -10,13 +10,12 @@ function ProductSize(props) {
         display="flex"
         justifyContent="space-between">
         <Pane>Select Size</Pane>
-        <Pane>Size Guide</Pane>
       </Pane>
       <Pane className="size-container">
         {sizes.map((size) => (
-          <div key={Math.random()} className="size-div">
+          <button key={Math.random()} className="size-div">
             {size}
-          </div>
+          </button>
         ))}
       </Pane>
     </Pane>
