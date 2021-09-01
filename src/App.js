@@ -8,9 +8,9 @@ import Footer from "./components/Footer";
 import HomePageComponents from "./pages/home/model/HomePageComponents";
 import ProductPage from "./pages/products/ProductPage";
 import ProductDetails from "./pages/productdetails/ProductDetails";
-import MenPage from "./pages/Men/MenPage";
-import WomenPage from "./pages/Women/WomenPage";
-import KidsPage from "./pages/Kids/KidsPage";
+import MenPage from "./pages/men/MenPage";
+import WomenPage from "./pages/women/WomenPage";
+import KidsPage from "./pages/kids/KidsPage";
 
 class App extends Component {
   render() {
