@@ -3,7 +3,7 @@ export const ProductData = [
     id: 1,
     name: "Nike Sportswear Tech Fleece",
     type: "Men's Jacket",
-    description:"A closet staple, the Nike Sportswear Club Pullover Hoodie takes a classic silhouette and combines a familiar tie-dye aesthetic with futuristic style—including a QR code on the hood",
+    description:"A closet staple, the Nike Sportswear Club Pullover Hoodie takes a classic silhouette and combines a familiar tie dye aesthetic with futuristic style including a QR code on the hood",
     color: [
       {
         id: 1,
@@ -38,7 +38,7 @@ export const ProductData = [
     description:"A closet staple, the Nike Sportswear Club Pullover Hoodie takes a classic silhouette and combines a familiar tie-dye aesthetic with futuristic style—including a QR code on the hood",
     color: [
       {
-        id: 2.1,
+        id: 1,
         clr: "red",
         img: ["2.jpg"],
         size: ["S", "M", "L", "XL"],
@@ -56,7 +56,7 @@ export const ProductData = [
     description:"A closet staple, the Nike Sportswear Club Pullover Hoodie takes a classic silhouette and combines a familiar tie-dye aesthetic with futuristic style—including a QR code on the hood",
     color: [
       {
-        id: 3.1,
+        id: 1,
         clr: "red",
         img: [
           "nikeair1 (1).jpg",
@@ -69,7 +69,7 @@ export const ProductData = [
         style: "DM7943-229",
       },
       {
-        id: 3.1,
+        id: 2,
         clr: "black",
         img: [
           "nikeair2 (1).jpg",
@@ -82,7 +82,7 @@ export const ProductData = [
         style: "DM7943-229",
       },
       {
-        id: 3.1,
+        id: 3,
         clr: "white",
         img: [
           "nikeair3 (1).jpg",
@@ -104,7 +104,7 @@ export const ProductData = [
     description:"A closet staple, the Nike Sportswear Club Pullover Hoodie takes a classic silhouette and combines a familiar tie-dye aesthetic with futuristic style—including a QR code on the hood",
     color: [
       {
-        id: 4.1,
+        id: 1,
         clr: "red",
         img: ["4.jpg"],
         size: ["S", "M", "L", "XL"],
@@ -121,7 +121,7 @@ export const ProductData = [
     description:"A closet staple, the Nike Sportswear Club Pullover Hoodie takes a classic silhouette and combines a familiar tie-dye aesthetic with futuristic style—including a QR code on the hood",
     color: [
       {
-        id: 5.1,
+        id: 1,
         clr: "red",
         img: ["5.jpg"],
         size: ["S", "M", "L", "XL"],
@@ -138,7 +138,7 @@ export const ProductData = [
     description:"A closet staple, the Nike Sportswear Club Pullover Hoodie takes a classic silhouette and combines a familiar tie-dye aesthetic with futuristic style—including a QR code on the hood",
     color: [
       {
-        id: 6.1,
+        id: 1,
         clr: "red",
         img: ["6.jpg"],
         size: ["S", "M", "L", "XL"],
@@ -157,7 +157,7 @@ export const ProductData = [
     description:"A closet staple, the Nike Sportswear Club Pullover Hoodie takes a classic silhouette and combines a familiar tie-dye aesthetic with futuristic style—including a QR code on the hood",
     color: [
       {
-        id: 7.1,
+        id: 1,
         clr: "red",
         img: ["1.jpg"],
         size: ["S", "M", "L", "XL"],

@@ -49,7 +49,7 @@ export default class ProductDetails extends Component {
               <ProductColor colors={color} getColorIndex={this.getColorIndex} />
               <ProductSize sizes={color[colorIndex].size} />
               <Pane>
-                <button className="black-btn"> Add to Bag</button>
+                <Button className="black-btn"> Add to Bag</Button>
                 <Button className="white-btn" iconAfter={HeartIcon}>
                   Favorite
                 </Button>
