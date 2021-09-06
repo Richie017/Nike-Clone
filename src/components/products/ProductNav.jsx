@@ -13,6 +13,7 @@ import {
 import "../../assets/css/products/productfilter.css";
 import { FilterDataLinks } from "../../data/ProductFilterCategoryLinks";
 import { FilterData } from "../../data/ProductFilterData";
+import { NavLink } from "react-router-dom";
 
 export default class ProductNav extends Component {
   constructor(props) {
@@ -64,9 +65,9 @@ export default class ProductNav extends Component {
           <UnorderedList className="subcategory-list-items">
             {this.state.subCategoryLinks.map((subCategory) => (
               <ListItem className="filter-list-items" key={subCategory.id}>
-                <a className="filter-list-tags" href={subCategory.link}>
+                 <NavLink className="filter-list-tags"  exact to={{ pathname: subCategory.link , state: {headdata: subCategory.title} }}>
                   {subCategory.title}
-                </a>
+                  </NavLink>
               </ListItem>
             ))}
           </UnorderedList>

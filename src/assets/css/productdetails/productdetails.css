@@ -93,6 +93,7 @@ a {
   border: 1px solid #a8a8a8;
   border-radius: 5px;
   box-shadow: none;
+  cursor: pointer;
 }
 
 .size-div:hover {
@@ -112,6 +113,7 @@ a {
   width: 70px;
   margin: 5px;
   border: 1px solid #080808;
+  cursor: pointer;
 }
 
 .image-button:focus {
@@ -126,6 +128,7 @@ a {
   vertical-align: top;
   width: 66px;
 }
+
 .black-btn {
   background-color: #080808;
   width: 100%;

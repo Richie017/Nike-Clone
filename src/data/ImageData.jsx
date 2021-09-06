@@ -59,16 +59,16 @@ export const categories = [
   {
     id: "1",
     title: "Shoes",
-    url: "/#",
+    url: "/shoes",
   },
   {
     id: "2",
     title: "Clothing",
-    url: "/#",
+    url: "/clothing",
   },
   {
     id: "1",
     title: "Sales",
-    url: "/#",
+    url: "/sales",
   },
 ];

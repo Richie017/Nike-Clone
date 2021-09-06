@@ -35,7 +35,7 @@ class KidsPage extends Component {
                   <Tab className="navbar-tab" key={tab.id}>
                     <NavLink
                       exact
-                      to={{ pathname: tab.url }}
+                      to={{ pathname: tab.url , state: {headdata: tab.title} }}
                       style={{ color: "#000", textDecoration: "none" }}>
                       {tab.title}
                     </NavLink>
