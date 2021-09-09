@@ -7,6 +7,7 @@ import Banner from "./components/header/Banner";
 import Footer from "./components/Footer";
 import HomePageComponents from "./pages/home/model/HomePageComponents";
 import ProductPage from "./pages/products/ProductPage";
+import ProductDetails from "./pages/productdetails/ProductDetails";
 import MenPage from "./pages/Men/MenPage";
 import WomenPage from "./pages/Women/WomenPage";
 import KidsPage from "./pages/Kids/KidsPage";
@@ -24,15 +25,15 @@ class App extends Component {
             <Route exact path="/">
               <HomePageComponents />
             </Route>
-              <Route exact path="/men">
-                  <MenPage />
-              </Route>
-              <Route exact path="/women">
-                  <WomenPage />
-              </Route>
-              <Route exact path="/kids">
-                  <KidsPage />
-              </Route>
+            <Route exact path="/men">
+              <MenPage />
+            </Route>
+            <Route exact path="/women">
+              <WomenPage />
+            </Route>
+            <Route exact path="/kids">
+              <KidsPage />
+            </Route>
 
             <Route
               exact
@@ -42,14 +43,8 @@ class App extends Component {
 
             <Route
               exact
-              path="/:category/:subcategory"
-              render={(props) => <ProductPage {...props} />}
-            />
-
-            <Route
-              exact
-              path="/:category/:subcategory/:subsubcategory"
-              render={(props) => <ProductPage {...props} />}
+              path="/:category/:productname"
+              render={(props) => <ProductDetails {...props} />}
             />
           </Switch>
 

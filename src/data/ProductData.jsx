@@ -1,67 +1,170 @@
 export const ProductData = [
-    {
-      id: 1,
-      name: "Nike Sportswear Tech Fleece",
-      type: "Men's Jacket",
-      img: "1.jpg",
-      color: ["black"],
-      size: "XL",
-      price: 10
-    },  
-    {
-      id: 2,
-      name: "Nike Waffle One",
-      type: "Men's Jacket",
-      img: "2.jpg",
-      color: ["black", "Blue", "White"],
-      size: "L",
-      price: 25
-    },  
-    {
-      id: 3,
-      name: "Nike Air Max 90",
-      type: "Men's Shoes",
-      tag: "Just in",
-      img: "3.jpg",
-      color: ["black"],
-      size: "XL",
-      price: 50
-    },  
-    {
-      id: 4,
-      name: "Nike Sportswear",
-      type: "Men's Pants",
-      img: "4.jpg",
-      color: ["black"],
-      size: "XL",
-      price: 20
-    },  
-    {
-      id: 5,
-      name: "Nike Space Hippie 01",
-      type: "Men's Dress",
-      img: "5.jpg",
-      color: ["black", "Blue"],
-      size: "M",
-      price: 100
-    },  
-    {
-      id: 6,
-      name: "Nike Dri-Feet Acedemy",
-      type: "Women's Dress",
-      img: "6.jpg",
-      color: ["black"],
-      size: ["M","L","XL"],
-      price: 35
-    }, 
-    {
-      id: 7,
-      name: "Nike Sportswear Kids",
-      type: "Kids' Dress",
-      tag: "Sustainable Materials",
-      img: "7.jpg",
-      color: ["black", "Blue"],
-      size: "XL",
-      price: 15
-    },   
-  ];
+  {
+    id: 1,
+    name: "Nike Sportswear Tech Fleece",
+    type: "Men's Jacket",
+    description:"A closet staple, the Nike Sportswear Club Pullover Hoodie takes a classic silhouette and combines a familiar tie dye aesthetic with futuristic style including a QR code on the hood",
+    color: [
+      {
+        id: 1,
+        clr: "black",
+        img: [
+          "White_1.jpg",
+          "White_2.jpg",
+          "White_3.jpg",
+          "White_4.jpg",
+          "White_5.jpg",
+          "White_6.jpg",
+        ],
+        size: ["XL", "L", "S", "M", "XS", "B"],
+        shown: "Obsidian/Photon Dust",
+        style: "DM7943-451",
+      },
+      {
+        id: 2,
+        clr: "yellow",
+        img: ["yel1.jpg", "yel2.jpg", "yel3.jpg", "yel4.jpg"],
+        size: ["XL", "X", "S"],
+        shown: "Taupe Haze/Apricot Agate",
+        style: "DM7943-229",
+      },
+    ],
+    price: 10,
+  },
+  {
+    id: 2,
+    name: "Nike Waffle One",
+    type: "Men's Jacket",
+    description:"A closet staple, the Nike Sportswear Club Pullover Hoodie takes a classic silhouette and combines a familiar tie-dye aesthetic with futuristic style—including a QR code on the hood",
+    color: [
+      {
+        id: 1,
+        clr: "red",
+        img: ["2.jpg"],
+        size: ["S", "M", "L", "XL"],
+        shown: "Taupe Haze/Apricot Agate",
+        style: "DM7943-229",
+      },
+    ],
+    price: 25,
+  },
+  {
+    id: 3,
+    name: "Nike Air Max 90",
+    type: "Men's Shoes",
+    tag: "Just in",
+    description:"A closet staple, the Nike Sportswear Club Pullover Hoodie takes a classic silhouette and combines a familiar tie-dye aesthetic with futuristic style—including a QR code on the hood",
+    color: [
+      {
+        id: 1,
+        clr: "red",
+        img: [
+          "nikeair1 (1).jpg",
+          "nikeair1 (1).png",
+          "nikeair1 (2).png",
+          "nikeair1 (3).png",
+        ],
+        size: ["S", "M", "L", "XL"],
+        shown: "Taupe Haze/Apricot Agate",
+        style: "DM7943-229",
+      },
+      {
+        id: 2,
+        clr: "black",
+        img: [
+          "nikeair2 (1).jpg",
+          "nikeair2 (1).png",
+          "nikeair2 (2).png",
+          "nikeair2 (3).png",
+        ],
+        size: ["S", "M", "L", "XL"],
+        shown: "Taupe Haze/Apricot Agate",
+        style: "DM7943-229",
+      },
+      {
+        id: 3,
+        clr: "white",
+        img: [
+          "nikeair3 (1).jpg",
+          "nikeair3 (1).png",
+          "nikeair3 (2).png",
+          "nikeair3 (3).png",
+        ],
+        size: ["S", "M", "L", "XL"],
+        shown: "Taupe Haze/Apricot Agate",
+        style: "DM7943-229",
+      },
+    ],
+    price: 50,
+  },
+  {
+    id: 4,
+    name: "Nike Sportswear",
+    type: "Men's Pants",
+    description:"A closet staple, the Nike Sportswear Club Pullover Hoodie takes a classic silhouette and combines a familiar tie-dye aesthetic with futuristic style—including a QR code on the hood",
+    color: [
+      {
+        id: 1,
+        clr: "red",
+        img: ["4.jpg"],
+        size: ["S", "M", "L", "XL"],
+        shown: "Taupe Haze/Apricot Agate",
+        style: "DM7943-229",
+      },
+    ],
+    price: 20,
+  },
+  {
+    id: 5,
+    name: "Nike Space Hippie 01",
+    type: "Men's Dress",
+    description:"A closet staple, the Nike Sportswear Club Pullover Hoodie takes a classic silhouette and combines a familiar tie-dye aesthetic with futuristic style—including a QR code on the hood",
+    color: [
+      {
+        id: 1,
+        clr: "red",
+        img: ["5.jpg"],
+        size: ["S", "M", "L", "XL"],
+        shown: "Taupe Haze/Apricot Agate",
+        style: "DM7943-229",
+      },
+    ],
+    price: 100,
+  },
+  {
+    id: 6,
+    name: "Nike Dri-Feet Acedemy",
+    type: "Women's Dress",
+    description:"A closet staple, the Nike Sportswear Club Pullover Hoodie takes a classic silhouette and combines a familiar tie-dye aesthetic with futuristic style—including a QR code on the hood",
+    color: [
+      {
+        id: 1,
+        clr: "red",
+        img: ["6.jpg"],
+        size: ["S", "M", "L", "XL"],
+        shown: "Taupe Haze/Apricot Agate",
+        style: "DM7943-229",
+      },
+    ],
+    
+    price: 35,
+  },
+  {
+    id: 7,
+    name: "Nike Sportswear Kids",
+    type: "Kids' Dress",
+    tag: "Sustainable Materials",
+    description:"A closet staple, the Nike Sportswear Club Pullover Hoodie takes a classic silhouette and combines a familiar tie-dye aesthetic with futuristic style—including a QR code on the hood",
+    color: [
+      {
+        id: 1,
+        clr: "red",
+        img: ["1.jpg"],
+        size: ["S", "M", "L", "XL"],
+        shown: "Taupe Haze/Apricot Agate",
+        style: "DM7943-229",
+      },
+    ],
+    price: 15,
+  },
+];

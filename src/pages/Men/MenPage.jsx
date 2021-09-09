@@ -29,18 +29,13 @@ class MenPage extends Component {
           <Text className="landing-nav-txt">Men</Text>
 
           <Pane classnName="landing-nav-pane">
-            <TabNavigation
-              style={{
-                textAlign: "center",
-                paddingLeft: "30px",
-                marginLeft: "700px",
-              }}>
+            <TabNavigation>
               <Pane className="navbar">
                 {this.state.categories.map((tab) => (
                   <Tab className="navbar-tab" key={tab.id}>
                     <NavLink
                       exact
-                      to={{ pathname: tab.url }}
+                      to={{ pathname: tab.url , state: {headdata: tab.title} }}
                       style={{ color: "#000", textDecoration: "none" }}>
                       {tab.title}
                     </NavLink>
@@ -49,6 +44,8 @@ class MenPage extends Component {
               </Pane>
             </TabNavigation>
           </Pane>
+
+          <Text style={{color: "#fff"}}>Men</Text>
         </Pane>
         <Pane className="container">
           <Pane className="img-container">

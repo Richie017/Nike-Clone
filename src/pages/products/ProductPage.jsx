@@ -22,10 +22,11 @@ export default class ProductPage extends Component {
   }
 
   render() {
-    const headname = this.props.location.headdata;
+    let headurl = this.props.match.params.category;
+    let headname = this.props.location.state.headdata;
     return (
       <Pane>
-        <Pane display="flex" padding={16}>
+        <Pane display="flex" padding={20}>
           <Pane flex={1} alignItems="center" display="flex">
             <Heading size={600}>{headname}</Heading>
           </Pane>
@@ -37,8 +38,7 @@ export default class ProductPage extends Component {
                 this.setState((prevState) => ({
                   showNavBar: !prevState.showNavBar,
                 }))
-              }
-            >
+              }>
               {this.state.showNavBar ? "Hide Filters" : "Show Filters"}
               {this.state.showNavBar ? (
                 <MinimizeIcon color="muted" size={12} marginLeft={10} />
@@ -54,7 +54,7 @@ export default class ProductPage extends Component {
             </Select>
           </Pane>
         </Pane>
-        <Pane style={{ display: "flex" }}>
+        <Pane display="flex">
           <ProductNav
             products={this.state.products}
             shownav={this.state.showNavBar}
@@ -62,6 +62,7 @@ export default class ProductPage extends Component {
           <Products
             products={this.state.products}
             shownav={this.state.showNavBar}
+            category={headurl}
           />
         </Pane>
       </Pane>

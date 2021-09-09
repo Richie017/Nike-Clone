@@ -15,10 +15,10 @@ export default class Products extends Component {
             name={product.name}
             type={product.type}
             tag={product.tag}
-            img={product.img}
             color={product.color}
-            size={product.size}
             price={product.price}
+            category={this.props.category}
+            description={product.description}
           />
         ))}
       </Pane>
